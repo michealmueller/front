@@ -17,6 +17,7 @@ export const PORT                 = argv['port']        || 5555;
 export const LIVE_RELOAD_PORT     = argv['reload-port'] || 4002;
 export const DOCS_PORT            = argv['docs-port']   || 4003;
 export const APP_BASE             = argv['base']        || '/';
+export const VERSION              = argv['v']           || (ENV !== 'prod' ? Date.now() : '');
 
 export const BOOTSTRAP_MODULE     = 'bootstrap';
 
@@ -34,7 +35,6 @@ export const APP_DEST             = `public`;
 export const CSS_DEST             = `${APP_DEST}/stylesheets`;
 export const JS_DEST              = `${APP_DEST}/js`;
 export const APP_ROOT             = `${APP_BASE}`;
-export const VERSION              = argv['v'] ? argv['v'] : Date.now();
 
 export const CSS_PROD_BUNDLE      = 'main.css';
 export const JS_PROD_SHIMS_BUNDLE = 'shims.js';
@@ -42,6 +42,9 @@ export const JS_PROD_APP_BUNDLE   = 'app.js';
 
 export const VERSION_NPM          = '2.14.7';
 export const VERSION_NODE         = '4.0.0';
+
+export const LOCALE                      = argv['locale']                 || '';
+export const LOCALE_INDEX_FILE_NAME      = argv['locale-index-file-name'] || 'index';
 
 interface InjectableDependency {
   src: string;

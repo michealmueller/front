@@ -72,3 +72,10 @@ gulp.task('beautify.xlf', done =>
   runSequence(
     'beautify.xlf',
     done));
+
+// --------------
+// Build everything (Production)
+gulp.task('build.all.prod', done =>
+  runSequence(
+    'build.all.prod',
+    done));
