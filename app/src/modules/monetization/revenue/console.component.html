@@ -6,8 +6,8 @@
       <div class="m-revenue--console-volume mdl-cell mdl-cell--4-col">
         <i>{{ getCurrencySymbol(currency) }}</i><span *ngIf="ready">{{net | number:'1.2-2'}}</span>
         <div class="m-revenue--console-label">
-          <label>Earnings</label>
-          <m-tooltip icon="help">
+          <label i18n="@@MONETIZATION__REVENUE__CONSOLE__EARNINGS_CARD_TITLE">Earnings</label>
+          <m-tooltip icon="help" i18n="@@MONETIZATION__REVENUE__CONSOLE__EARNINGS_CARD_TOOLTIP">
             This is your total earnings for the past 30 days, minus any fees.
           </m-tooltip>
         </div>
@@ -16,8 +16,8 @@
       <div class="m-revenue--console-balance mdl-cell mdl-cell--4-col">
         <i>{{ getCurrencySymbol(currency) }}</i><span *ngIf="ready">{{balance | number:'1.2-2'}}</span>
         <div class="m-revenue--console-label">
-          <label>Pending</label>
-          <m-tooltip icon="help">
+          <label i18n="@@MONETIZATION__REVENUE__CONSOLE__PENDING_CARD_TITLE">Pending</label>
+          <m-tooltip icon="help" i18n="@@MONETIZATION__REVENUE__CONSOLE__PENDING_CARD_TOOLTIP">
             This is your earnings awaiting payout. A negative number indicates a refund or chargeback has occured.
           </m-tooltip>
         </div>
@@ -25,8 +25,8 @@
       <div class="m-revenue--console-payouts mdl-cell mdl-cell--4-col">
         <i>{{ getCurrencySymbol(currency) }}</i><span *ngIf="ready">{{payouts | number:'1.2-2'}}</span>
         <div class="m-revenue--console-label">
-          <label>Paid out</label>
-          <m-tooltip icon="help">
+          <label i18n="@@MONETIZATION__REVENUE__CONSOLE__PAID_OUT_CARD_TITLE">Paid out</label>
+          <m-tooltip icon="help" i18n="@@MONETIZATION__REVENUE__CONSOLE__PAID_OUT_CARD_TOOLTIP">
             This is what has been sent to your bank account
           </m-tooltip>
         </div>
@@ -35,10 +35,10 @@
   </div>
 
   <div class="m-revenue--console-nav mdl-color--blue-700 mdl-color-text--white">
-    <div class="m-revenue--console-nav-item" routerLinkActive="mdl-color--blue-800" routerLink="points">Points</div>
-    <div class="m-revenue--console-nav-item" routerLinkActive="mdl-color--blue-800" routerLink="earnings">Earnings</div>
-    <div class="m-revenue--console-nav-item" routerLinkActive="mdl-color--blue-800" routerLink="payouts">Payouts</div>
-    <div class="m-revenue--console-nav-item" routerLinkActive="mdl-color--blue-800" routerLink="options">Options</div>
+    <div class="m-revenue--console-nav-item" routerLinkActive="mdl-color--blue-800" routerLink="points" i18n="@@MONETIZATION__REVENUE__CONSOLE__POINTS_NAV">Points</div>
+    <div class="m-revenue--console-nav-item" routerLinkActive="mdl-color--blue-800" routerLink="earnings" i18n="@@MONETIZATION__REVENUE__CONSOLE__EARNINGS_NAV">Earnings</div>
+    <div class="m-revenue--console-nav-item" routerLinkActive="mdl-color--blue-800" routerLink="payouts" i18n="@@MONETIZATION__REVENUE__CONSOLE__PAYOUTS_NAV">Payouts</div>
+    <div class="m-revenue--console-nav-item" routerLinkActive="mdl-color--blue-800" routerLink="options" i18n="@@MONETIZATION__REVENUE__CONSOLE__OPTIONS_NAV">Options</div>
   </div>
 
   <div class="mdl-grid" style="max-width:990px;">
@@ -52,25 +52,25 @@
         <li>
           <a class="mdl-color-text--blue-grey-500" routerLink="points/purchase" routerLinkActive="selected">
             <i class="material-icons">shopping_cart</i>
-            <!-- i18n -->Buy Points<!-- /i18n -->
+            <!-- i18n: @@MONETIZATION__REVENUE__CONSOLE__BUY_POINTS_NAV -->Buy Points<!-- /i18n -->
           </a>
         </li>
         <li>
           <a class="mdl-color-text--blue-grey-500" routerLink="/wallet/boost" routerLinkActive="selected">
             <i class="material-icons">trending_up</i>
-            <!-- i18n -->Boost<!-- /i18n -->
+            <!-- i18n: @@MONETIZATION__REVENUE__CONSOLE__BOOST_NAV -->Boost<!-- /i18n -->
           </a>
         </li>
         <li>
           <a class="mdl-color-text--blue-grey-500 m-wallet--wire-link" routerLink="/wallet/revenue/wire" routerLinkActive="selected">
             <i class="ion-icon ion-flash"></i>
-            <!-- i18n -->Wire<!-- /i18n -->
+            <!-- i18n: @@MONETIZATION__REVENUE__CONSOLE__WIRE_NAV -->Wire<!-- /i18n -->
           </a>
         </li>
         <li>
           <a class="mdl-color-text--blue-grey-500" routerLink="/plus" routerLinkActive="selected">
             <i class="material-icons">add_circle_outline</i>
-            <!-- i18n -->Minds Plus<!-- /i18n -->
+            <!-- i18n: @@MONETIZATION__REVENUE__CONSOLE__MINDS_PLUS_NAV -->Minds Plus<!-- /i18n -->
           </a>
         </li>
         <li>
@@ -79,7 +79,7 @@
             routerLinkActive="selected"
             >
             <i class="material-icons">share</i>
-            <span i18n>Affiliate Program</span>
+            <span i18n="@@MONETIZATION__REVENUE__CONSOLE__AFFILIATE_PROGRAM_NAV">Affiliate Program</span>
           </a>
         </li>
         <li>
@@ -87,7 +87,7 @@
             routerLink="/monetization"
             >
             <i class="material-icons">help</i>
-            <span i18n>About Monetization</span>
+            <span i18n="@@MONETIZATION__REVENUE__CONSOLE__ABOUT_MONETIZATION_NAV">About Monetization</span>
           </a>
         </li>
       </ul>

@@ -1,6 +1,6 @@
 <div class="mdl-grid m-admin-payouts" style="max-width:600px">
   <div class="m-note">
-    <!-- i18n -->Users can be banned for monetizing on the dropdown in their profile.<!-- /i18n -->
+    <!-- i18n:@@MINDS__ADMIN__PAYOUTS__BAN_NOTICE -->Users can be banned for monetizing on the dropdown in their profile.<!-- /i18n -->
   </div>
 
   <div *ngFor="let payout of payouts; let i = index"
@@ -21,20 +21,20 @@
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
           (click)="review(i)"
           [disabled]="inProgress"
-          i18n
+          i18n="@@MINDS__ADMIN__PAYOUTS__REVIEW_ACTION"
         >Review</button>
       </div>
       <div class="m-payout-cta" *ngIf="reviewing === i">
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--green"
           (click)="pay(i)"
           [disabled]="inProgress"
-          i18n
+          i18n="@@MINDS__ADMIN__PAYOUTS__PAY_ACTION"
         >Pay</button>
 
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
           (click)="review(null)"
           [disabled]="inProgress"
-          i18n
+          i18n="@@MINDS__ADMIN__PAYOUTS__CANCEL_ACTION"
         >Cancel</button>
       </div>
     </div>

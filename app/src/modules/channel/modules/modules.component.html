@@ -1,5 +1,10 @@
 <div class="mdl-card__title" [routerLink]="linksTo">
-  <h2 class="mdl-card__title-text" style="text-transform:capitalize">{{type}}s</h2>
+  <h2 class="mdl-card__title-text" style="text-transform:capitalize" [ngSwitch]="type">
+    <ng-container *ngSwitchCase="image" i18n="@@CHANNEL__MODULES__IMAGES_TITLE">Images</ng-container>
+    <ng-container *ngSwitchCase="video" i18n="@@CHANNEL__MODULES__VIDEOS_TITLE">Videos</ng-container>
+    <ng-container *ngSwitchCase="blog" i18n="@@CHANNEL__MODULES__BLOGS_TITLE">Blogs</ng-container>
+    <ng-container *ngSwitchDefault>{{ type }}</ng-container>
+  </h2>
 </div>
 
 <div class="mdl-card__supporting-text mdl-color-text--grey-600 minds-channel-media-sidebard" style="min-height:0;" *ngIf="type != 'blog'">

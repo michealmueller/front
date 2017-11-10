@@ -5,6 +5,7 @@
 
   <span class="m-search-bar--context" *ngIf="hasSearchContext"
     (click)="setFocus()"
+    i18n="@@SEARCH__BAR__CONTEXT_LABEL"
   >
     Search {{ searchContext | async }}:
   </span>
