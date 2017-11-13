@@ -9,7 +9,7 @@
     "build-i18n": "npm run build-i18n-prod && npm run build-index-i18n-prod --",
     "test": "karma start",
     "extract": "gulp prepare.prod && ng-xi18n -p angular-tsconfig.json --i18nFormat xlf",
-    "postextract": "rimraf .ngcli-build/ && rmv \"^messages\\.(.*)$\" ./app/locale/Default.\\$1",
+    "postextract": "rimraf .ngcli-build/ && rmv \"^messages\\.(.*)$\" ./app/locale/Default.\\$1 && gulp lint.xlf --source=Default.xlf --soft",
     "clean": "rimraf .tmp/ .tmp.aot/",
     "compile-aot": "ngc -p tsconfig-aot.json",
     "compile-embed-aot": "ngc -p tsconfig-embed-aot.json",

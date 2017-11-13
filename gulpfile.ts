@@ -73,6 +73,14 @@ gulp.task('beautify.xlf', done =>
     'beautify.xlf',
     done));
 
+
+// --------------
+// Lint XLF
+gulp.task('lint.xlf', done =>
+  runSequence(
+    'lint.xlf',
+    done));
+
 // --------------
 // Build everything (Production)
 gulp.task('build.all.prod', done =>
