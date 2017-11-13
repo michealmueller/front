@@ -281,7 +281,7 @@
       <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && notification.entityObj.name">{{notification.entityObj.name}}</span>
       <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && !notification.entityObj.name && notification.entityObj.type !== 'user'" i18n="@@NOTIFICATIONS__NOTIFICATION__YOUR_POST">your post</span>
       <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && !notification.entityObj.name && notification.entityObj.type === 'user'" i18n="@@NOTIFICATIONS__NOTIFICATION__YOUR_CHANNEL">your channel</span>
-      <!-- i18n: boost --> is awaiting approval.<!-- /i18n -->
+      <!-- i18n: boost@@NOTIFICATIONS__NOTIFICATION__BOOST_SUBMITTED__AWAITING_APPROVAL --> is awaiting approval.<!-- /i18n -->
      </p>
    </a>
   </ng-template>
@@ -294,7 +294,7 @@
           <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && notification.entityObj.name">{{notification.entityObj.name}}</span>
           <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && !notification.entityObj.name && notification.entityObj.type !== 'user'" i18n="@@NOTIFICATIONS__NOTIFICATION__YOUR_POST">your post</span>
           <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && !notification.entityObj.name && notification.entityObj.type === 'user'" i18n="@@NOTIFICATIONS__NOTIFICATION__YOUR_CHANNEL">your channel</span>
-          <!-- i18n: boost -->is awaiting approval by <span class="pseudo-link mdl-color-text--blue-grey-400">@{{notification.params.channel}}</span><!-- /i18n -->
+          <!-- i18n: boost@@NOTIFICATIONS__NOTIFICATION__BOOST_SUBMITTED_P2P__AWAITING_APPROVAL_BY -->is awaiting approval by <span class="pseudo-link mdl-color-text--blue-grey-400">@{{notification.params.channel}}</span><!-- /i18n -->
         </p>
       </a>
   </ng-template>

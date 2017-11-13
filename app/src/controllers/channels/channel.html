@@ -69,7 +69,7 @@
           <div class="m-channel-bio-editor m-channel-city-editor" *ngIf="editing && isOwner()">
             <div class="m-channel-bio-input m-channel-city-input">
               <i class="material-icons mdl-color-text--blue-grey-300">location_on</i>
-              <input (keyup)="findCity(user.city)" name="city" [(ngModel)]="user.city" class="" placeholder="Enter your city..." i18n-placeholder />
+              <input (keyup)="findCity(user.city)" name="city" [(ngModel)]="user.city" class="" placeholder="Enter your city..." i18n-placeholder="@@MINDS__CHANNELS__CITY_INPUT_PLACEHOLDER" />
             </div>
             <div class="m-discovery-cities mdl-card mdl-shadow--4dp" *ngIf="editing && cities.length > 0">
               <p class="mdl-color-text--blue-grey-300" i18n="@@MINDS__CHANNELS__CITY_SELECTOR">Select your city:</p>

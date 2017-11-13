@@ -24,7 +24,7 @@ import { BanModalComponent } from '../../../ban/modal/modal.component';
         >
         Ban globally
       </li>
-      <li class="mdl-menu__item" *ngIf="session.isAdmin()" [hidden]="user.banned !== 'yes'" (click)="unBan()" i18n>Un-ban globally</li>
+      <li class="mdl-menu__item" *ngIf="session.isAdmin()" [hidden]="user.banned !== 'yes'" (click)="unBan()" i18n="@@MINDS__BUTTONS__USER_DROPDOWN__UNBAN_GLOBALLY">Un-ban globally</li>
       <li class="mdl-menu__item"
         *ngIf="session.isAdmin()"
         [hidden]="user.ban_monetization === 'yes'"
