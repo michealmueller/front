@@ -46,11 +46,11 @@ interface CreditCard {
           <span class="m-payments--saved-card-item-type">{{card.brand}}</span>
           <span class="m-payments--saved-card-item-number">**** {{card.last4}}</span>
           <span class="m-payments--saved-card-item-expiry">{{card.exp_month}} / {{card.exp_year}}</span>
-          <span class="m-payments--saved-card-item-select" i18n="@@CHECKOUT__SELECT_ACTION">Select</span>
+          <span class="m-payments--saved-card-item-select" i18n="@@M__ACTION__SELECT">Select</span>
         </li>
         <li class="m-payments--saved-card-item m-payments-saved--item-new" (click)="cards = []">
           <span class="m-payments--saved-card-item-type" i18n="@@CHECKOUT__USE_NEW_CARD">Use a new card</span>
-          <span class="m-payments--saved-card-item-select" i18n="@@CHECKOUT__SELECT_ACTION">Select</span>
+          <span class="m-payments--saved-card-item-select" i18n="@@M__ACTION__SELECT">Select</span>
         </li>
       </ul>
     </div>

@@ -17,7 +17,7 @@
         <span *ngIf="subscription.entity && subscription.entity.type == 'user'"><i style="text-style:normal">@</i>{{subscription.entity.username}}</span>
         <span *ngIf="subscription.entity && subscription.entity.type != 'user'"><i style="text-style:normal">@</i>{{subscription.entity.ownerObj.username}}</span>
         <span class="m-settings--billing-subscriptions--subscription-item-amount">{{subscription.amount | currency:'USD':true:'1.0-0' }}</span>
-        <span class="m-settings--billing-subscriptions--subscription-item-select" (click)="cancel(i)" i18n="@@SETTINGS__SUBSCRIPTIONS__CANCEL_ACTION">Cancel</span>
+        <span class="m-settings--billing-subscriptions--subscription-item-select" (click)="cancel(i)" i18n="@@M__ACTION__CANCEL">Cancel</span>
       </li>
     </ul>
   </div>

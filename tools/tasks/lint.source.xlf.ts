@@ -2,7 +2,7 @@ import * as gutil from 'gulp-util';
 import * as XML from 'pixl-xml';
 import { join } from 'path';
 import { argv } from 'yargs';
-import { statSync, readFileSync, writeFileSync } from 'fs';
+import { statSync, readFileSync } from 'fs';
 import { APP_SRC } from '../config';
 import { Hash } from 'crypto';
 
@@ -237,7 +237,7 @@ class Linter {
     // Check source
 
     if (typeof unit.source !== 'string') {
-      throw new ContextError(context, `Invalid interpolation value on 'source' for unit ${id}`);
+      throw new ContextError(context, `Invalid interpolation value on 'source' for unit ${id}. Did you use \`gulp extract\`?`);
     }
 
     // Add to cache
@@ -256,19 +256,14 @@ class Linter {
 // MAIN
 
 export = (gulp, plugins) => cb => {
-  if (!argv.source) {
-    throw new Error('Missing source parameter. e.g. Default.xlf');
+  if (!argv.file) {
+    throw new Error('Missing file parameter. e.g. Default.xlf');
   }
 
-  let file = join(APP_SRC, 'locale', argv.source);
+  let file = join(APP_SRC, 'locale', argv.file);
   statSync(file); // check if exists
 
   let fileContent = readFileSync(file).toString();
-
-  fileContent = fileContent
-    .replace(/\&#10;/g, "\n")
-    .replace(/\&#13;/g, "\n")
-    .replace(/<x\s+(.*?)\s*\/>/g, "{{$1}}");
 
   let xmlContent = XML.parse(fileContent, {
     preserveAttributes: true,

@@ -1,7 +1,7 @@
 <div class="m-boost-rotator-tools">
   <ul class="m-boost-navigation">
     <li routerLink="/newsfeed/subscribed" routerLinkActive="selected">
-      <span i18n="@@MINDS__NEWSFEED__BOOST_ROTATOR__NEWSFEED">Newsfeed</span>
+      <span i18n="@@M__FEATURE__NEWSFEED">Newsfeed</span>
       <m-tooltip icon="help" i18n="@@MINDS__NEWSFEED__BOOST_ROTATOR__NEWSFEED_TOOLTIP">
         Your Newsfeed contains posts from channels that you are subscribed to, as well as boosted posts from the wider network 
       </m-tooltip>
@@ -26,7 +26,7 @@
     <i class="material-icons mdl-color-text--blue-grey-300" title="Boost Settings" (click)="toggle.value = !toggle.value">settings</i>
     <ul class="minds-dropdown-menu" [hidden]="!toggle.value">
       <li class="mdl-menu__item" *ngIf="!disabled">
-        <span i18n="Open as Open Boost@@MINDS__NEWSFEED__BOOST_ROTATOR__OPEN_BOOST_ITEM">Open</span>
+        <span i18n="open boost|Open as Open Boost@@MINDS__NEWSFEED__BOOST_ROTATOR__OPEN_BOOST_ITEM">Open</span>
         <m-tooltip icon="help" i18n="@@MINDS__NEWSFEED__BOOST_ROTATOR__OPEN_BOOST_ITEM_TOOLTIP">
           Open Boost may contain controversial content. By selecting Open, you acknowledge that you are willing to see controversial content.       
         </m-tooltip>
@@ -39,7 +39,7 @@
         </label>
       </li>
       <li class="mdl-menu__item" *ngIf="rating == 2 && !disabled">
-        <span i18n="@@MINDS__NEWSFEED__BOOST_ROTATOR__EXPLICIT_ITEM">Explicit</span>
+        <span i18n="@@M__COMMON__EXPLICIT">Explicit</span>
         <m-tooltip icon="help" i18n="@@MINDS__NEWSFEED__BOOST_ROTATOR__EXPLICIT_ITEM_TOOLTIP">
           By selecting Explicit mode, you acknowledge that you are 18+ years of age and are willing to see graphic content, explicit language, and nudity.
         </m-tooltip>

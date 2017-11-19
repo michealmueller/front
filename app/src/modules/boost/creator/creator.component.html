@@ -1,7 +1,7 @@
 <div class="m-boost--creator">
 
   <div class="m-boost--creator--header">
-    <h2 i18n="@@BOOST__CREATOR__BOOST_TITLE">Boost</h2>
+    <h2 i18n="@@M__FEATURE__BOOST">Boost</h2>
 
     <div class="m-boost--creator--wallet">
       <i class="material-icons m--middle">account_balance</i>
@@ -21,27 +21,27 @@
         (click)="setBoostType('newsfeed')"
         [class.m-boost--creator-selector--highlight]="!boost.type || boost.type == 'newsfeed'"
       >
-        <h4 i18n="@@BOOST__CREATOR__NEWSFEEDS_SELECTOR">Newsfeeds</h4>
+        <h4 i18n="@@M__FEATURE__NEWSFEED_PLURAL">Newsfeeds</h4>
         <span class="m-boost--creator-selector--description" i18n="@@BOOST__CREATOR__NEWSFEEDS_SELECTOR_DESC">Your content will appear on newsfeeds across the site.</span>
-        <span class="m-boost--creator-selector--selected-label" i18n="@@BOOST__CREATOR__SELECTED_LABEL">Selected</span>
+        <span class="m-boost--creator-selector--selected-label" i18n="@@M__COMMON__SELECTED">Selected</span>
       </li>
 
       <li *ngIf="allowedTypes.p2p"
         (click)="setBoostType('p2p')"
         [class.m-boost--creator-selector--highlight]="!boost.type || boost.type == 'p2p'"
       >
-        <h4 i18n="@@BOOST__CREATOR__CHANNELS_SELECTOR">Channels</h4>
+        <h4 i18n="@@M__FEATURE__CHANNEL__PLURAL">Channels</h4>
         <span class="m-boost--creator-selector--description" i18n="@@BOOST__CREATOR__CHANNELS_SELECTOR_DESC">Your content will be shared to a specific channel in exchange for USD or points.</span>
-        <span class="m-boost--creator-selector--selected-label" i18n="@@BOOST__CREATOR__SELECTED_LABEL">Selected</span>
+        <span class="m-boost--creator-selector--selected-label" i18n="@@M__COMMON__SELECTED">Selected</span>
       </li>
 
       <li *ngIf="allowedTypes.content"
         (click)="setBoostType('content')"
         [class.m-boost--creator-selector--highlight]="!boost.type || boost.type == 'content'"
       >
-        <h4 i18n="@@BOOST__CREATOR__SIDEBARS_SELECTOR">Sidebars</h4>
+        <h4 i18n="@@M__FEATURE__SIDEBAR_PLURAL">Sidebars</h4>
         <span class="m-boost--creator-selector--description" i18n="@@BOOST__CREATOR__SIDEBARS_SELECTOR_DESC">Your content will display on the sidebars throughout the site.</span>
-        <span class="m-boost--creator-selector--selected-label" i18n="@@BOOST__CREATOR__SELECTED_LABEL">Selected</span>
+        <span class="m-boost--creator-selector--selected-label" i18n="@@M__COMMON__SELECTED">Selected</span>
       </li>
     </ul>
   </section>
@@ -70,8 +70,8 @@
         (click)="amountEditorFocus()"
       >
         <ng-container *ngIf="boost.type != 'p2p'" i18n="@@BOOST__CREATOR__VIEWS_INPUT_LABEL">views</ng-container>
-        <ng-container *ngIf="boost.type == 'p2p' && boost.currency == 'points'" i18n="@@BOOST__CREATOR__POINTS_INPUT_LABEL">points</ng-container>
-        <ng-container *ngIf="boost.type == 'p2p' && boost.currency == 'usd'" i18n="@@BOOST__CREATOR__USD_INPUT_LABEL">USD</ng-container>
+        <ng-container *ngIf="boost.type == 'p2p' && boost.currency == 'points'" i18n="points input|@@M__COMMON__POINTS_INPUT">points</ng-container>
+        <ng-container *ngIf="boost.type == 'p2p' && boost.currency == 'usd'" i18n="usd input|@@M__COMMON__USD_INPUT">USD</ng-container>
         <!-- TODO: BTC -->
       </span>
     </div>
@@ -89,8 +89,8 @@
         [class.m-boost--creator-selector--highlight]="!boost.currency || boost.currency == 'usd'"
       >
         <h4 i18n="@@BOOST__CREATOR__USD_SELECTOR"><b *ngIf="boost.amount">{{ calcCharges('usd') | currency:'USD':true }}</b> USD</h4>
-        <span class="m-boost--creator-selector--cta" i18n="@@BOOST__CREATOR__USD_SELECTOR_CTA">Select Money</span>
-        <span class="m-boost--creator-selector--selected-label" i18n="@@BOOST__CREATOR__SELECTED_LABEL">Selected</span>
+        <span class="m-boost--creator-selector--cta" i18n="@@M__COMMON__SELECT_MONEY">Select Money</span>
+        <span class="m-boost--creator-selector--selected-label" i18n="@@M__COMMON__SELECTED">Selected</span>
       </li>
 
       <li
@@ -101,8 +101,8 @@
           <b *ngIf="boost.amount">{{ calcCharges('points') | number }}</b>
           {{ boost.amount ? 'points' : 'Points' }}
         </h4>
-        <span class="m-boost--creator-selector--cta" i18n="@@BOOST__CREATOR__POINTS_SELECTOR_CTA">Select Points</span>
-        <span class="m-boost--creator-selector--selected-label" i18n="@@BOOST__CREATOR__SELECTOR_LABEL">Selected</span>
+        <span class="m-boost--creator-selector--cta" i18n="@@M__COMMON__SELECT_POINTS">Select Points</span>
+        <span class="m-boost--creator-selector--selected-label" i18n="@@M__COMMON__SELECTED">Selected</span>
       </li>
 
       <!-- TODO: BTC -->
@@ -116,8 +116,8 @@
       <div class="m-boost--creator-payment-attached" *ngIf="boost.nonce">
         <i class="material-icons">check_circle</i>
         <span>
-          <!-- i18n: @@BOOST__CREATOR__PAYMENT_ATTACHED -->Your payment is attached.<!-- /i18n -->
-          <b (click)="boost.nonce = null" i18n="@@BOOST__CREATOR__CHANGE_PAYMENT">Change</b>
+          <!-- i18n: @@M__COMMON__PAYMENT_ATTACHED -->Your payment is attached.<!-- /i18n -->
+          <b (click)="boost.nonce = null" i18n="@@M__ACTION__CHANGE">Change</b>
         </span>
       </div>
     </div>
@@ -129,7 +129,7 @@
     <section class="m-boost--creator-section m-boost--creator-section-categories">
       <h3>
         <!-- i18n: @@BOOST__CREATOR__TARGET_TITLE -->Target<!-- /i18n -->
-        <span class="m-boost--creator-section--title-context" i18n="@@BOOST__CREATOR__TARGET_TITLE_CTX">
+        <span class="m-boost--creator-section--title-context" i18n="@@BOOST__CREATOR__CATEGORIES_TARGET_TITLE_CTX">
           Select the categories which you want your boost to be targeted to ({{ rates.maxCategories }} max).
         </span>
       </h3>
@@ -157,8 +157,8 @@
         [class.m-boost--creator-toggle--highlight]="boost.priority"
         (click)="togglePriority()"
       >
-        <span class="m-boost--creator-toggle--select" i18n="@@BOOST__CREATOR__SELECT_LABEL">Select</span>
-        <span class="m-boost--creator-toggle--selected" i18n="@@BOOST__CREATOR__SELECTED_LABEL">Selected</span>
+        <span class="m-boost--creator-toggle--select" i18n="@@M__ACTION__SELECT">Select</span>
+        <span class="m-boost--creator-toggle--selected" i18n="@@M__COMMON__SELECTED">Selected</span>
 
         <span class="m-boost--creator-toggle--label" *ngIf="boost.currency == 'usd'" i18n="@@BOOST__CREATOR__USD_PRIORITY_FEE">
           + <b>{{ calcPriorityChargesPreview('usd') | currency:'USD':true }} USD</b>
@@ -219,8 +219,8 @@
           [class.m-boost--creator-toggle--highlight]="boost.postToFacebook"
           (click)="togglePostToFacebook()"
         >
-          <span class="m-boost--creator-toggle--select" i18n="@@BOOST__CREATOR__SELECT_LABEL">Select</span>
-          <span class="m-boost--creator-toggle--selected" i18n="@@BOOST__CREATOR__SELECTED_LABEL">Selected</span>
+          <span class="m-boost--creator-toggle--select" i18n="@@M__ACTION__SELECT">Select</span>
+          <span class="m-boost--creator-toggle--selected" i18n="@@M__COMMON__SELECTED">Selected</span>
 
           <span i18n="Post to [page]@@BOOST__CREATOR__POST_TO_FACEBOOK_LABEL">Post to {{ boost.target.fb.name }}</span>
           <img [src]="'https://graph.facebook.com/' + boost.target.fb.uuid + '/picture'" />
@@ -245,7 +245,7 @@
       <button class="m-boost--creator-button"
         [disabled]="!canSubmit() || inProgress || success || criticalError"
         (click)="submit()"
-        i18n="@@BOOST__CREATOR__BOOST_ACTION"
+        i18n="verb|@@M__ACTION__BOOST"
       >Boost</button>
 
       <div *ngIf="inProgress" class="m-boost--creator--submit-label mdl-spinner mdl-js-spinner is-active" [mdl]></div>

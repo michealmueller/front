@@ -7,7 +7,7 @@
       <a [routerLink]="['/wallet/purchase']" class="mdl-card mdl-color--green mdl-color-text--white mdl-shadow--8dp m-boost-console-link" *ngIf="session.getLoggedInUser().plus">
         <div class="mdl-card__supporting-text mdl-color-text--white minds-newsfeed-sidebar-button">
           <i class="material-icons">favorite</i>
-          <!-- i18n: @@MINDS__NEWSFEED__BUY_POINTS_ACTION -->Buy Points<!-- /i18n -->
+          <!-- i18n: @@M__ACTION__BUY_POINTS -->Buy Points<!-- /i18n -->
           <span class="m-buypoints-tag" i18n="@@MINDS__NEWSFEED__1_BY_1_CONVERSION">1 point = 1 view</span>
         </div>
       </a>
@@ -33,7 +33,7 @@
         </div>
         <div class="mdl-card__supporting-text mdl-color-text--white minds-newsfeed-sidebar-button" *ngIf="session.isLoggedIn() && session.getLoggedInUser().programs.indexOf('affiliate') > -1" >
           <i class="material-icons">share</i>
-          <!-- i18n: @@MINDS__NEWSFEED__AFFILIATE_PROGRAM_ACTION -->Affiliate Program<!-- /i18n -->
+          <!-- i18n: @@M__FEATURE__AFFILIATE_PROGRAM -->Affiliate Program<!-- /i18n -->
         </div>
       </a>
 
@@ -48,7 +48,7 @@
       <a (click)="invite.open = true" class="mdl-card mdl-color--amber mdl-color-text--white mdl-shadow--8dp m-boost-console-link m-invite-link" *ngIf="session.isLoggedIn() && session.getLoggedInUser().programs.indexOf('affiliate') <= -1">
         <div class="mdl-card__supporting-text mdl-color-text--white minds-newsfeed-sidebar-button">
           <i class="material-icons">email</i>
-          <!-- i18n: @@MINDS__NEWSFEED__INVITE_YOUR_FRIENDS_ACTION -->Invite your friends<!-- /i18n -->
+          <!-- i18n: @@M__ACTION__INVITE_FRIENDS -->Invite your friends<!-- /i18n -->
         </div>
       </a>
 

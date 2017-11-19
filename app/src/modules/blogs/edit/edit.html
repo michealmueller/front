@@ -61,7 +61,7 @@
     <div class="m-category-info">
       <i class="material-icons">label</i>
       <select name="category" [ngModel]="blog.category" (change)="blog.category = $event.target.value" class="mdl-color-text--blue-grey-300 m-form-select">
-          <option value="" i18n="@@BLOGS__EDIT__CATEGORY_PLACEHOLDER">-- Category --</option>
+          <option value="" i18n="@@M__COMMON__CATEGORY_PLACEHOLDER">-- Category --</option>
           <option *ngFor="let c of categories" [value]="c.id">{{c.label}}</option>
       </select>
     </div>
@@ -76,7 +76,7 @@
         <i class="material-icons"
         [ngClass]="{ 'mdl-color-text--red-500': blog.mature }"
         title="Mature content"
-        i18n-title="@@BLOGS__MATURE_CONTENT_LABEL"
+        i18n-title="@@M__COMMON__MATURE_CONTENT"
         >explicit</i>
         <span [ngClass]="{ 'mdl-color-text--red-500': blog.mature }">{{ blog.mature ? 'Mature content' : 'Anyone' }}</span>
       </a>

@@ -18,7 +18,7 @@
     class="m-boost-card--manager-item"
   >
     <i class="material-icons">remove_red_eye</i>
-    <!-- i18n: @@BOOST__CONSOLE__CARD__IMPRESSIONS_COUNT -->{{ boost.impressions | number }} views<!-- /i18n -->
+    <!-- i18n: @@M__COMMON__VIEWS_WITH_COUNT -->{{ boost.impressions | number }} views<!-- /i18n -->
   </div>
 
   <!-- USD bid, if applicable -->
@@ -34,7 +34,7 @@
     class="m-boost-card--manager-item"
   >
     <i class="material-icons">account_balance</i>
-    <!-- i18n: @@BOOST__CONSOLE__CARD__IMPRESSIONS_COUNT -->{{ boost.bid | number }} views<!-- /i18n -->
+    <!-- i18n: @@M__COMMON__VIEWS_WITH_COUNT -->{{ boost.bid | number }} views<!-- /i18n -->
   </div>
 
   <!-- TODO: BTC  -->
@@ -84,13 +84,13 @@
     <button *ngIf="canReject()"
       class="mdl-button mdl-button--raised mdl-color--red-600 mdl-color-text--white"
       (click)="reject()"
-      i18n="@@BOOST__CONSOLE__CARD__REJECT_ACTION"
+      i18n="@@M__ACTION__REJECT"
     >Reject</button>
 
     <button *ngIf="canAccept()"
       class="mdl-button mdl-button--raised mdl-color--green-400 mdl-color-text--white"
       (click)="accept()"
-      i18n="@@BOOST__CONSOLE__CARD__ACCEPT_ACTION"
+      i18n="@@M__ACTION__ACCEPT"
     >Accept</button>
   </div>
 </div>

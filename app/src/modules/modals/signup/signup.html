@@ -1,7 +1,7 @@
 <m-modal [open]="open" (closed)="onClose($event)" *ngIf="!session.isLoggedIn() || display != 'initial'">
     <div class="mdl-card__title" [hidden]="display == 'onboarding' || display == 'categories'">
         <img src="/assets/logos/small.png" (click)="close()"/>
-        <h4 class="mdl-color-text--grey-600" i18n="@@MODALS__SIGNUP__TITLE">Your Social Network</h4>
+        <h4 class="mdl-color-text--grey-600" i18n="@@M__SOCIAL_NETWORK_SLOGAN">Your Social Network</h4>
     </div>
 
     <!-- Initial Display -->

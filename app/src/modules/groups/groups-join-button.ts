@@ -17,7 +17,7 @@ import { SessionFactory } from '../../services/session';
       Join
     </button>
     <span *ngIf="group['is:invited'] &amp;&amp; !group['is:member']">
-      <button class="minds-group-join-button" (click)="accept()" i18n="@@GROUPS__JOIN_BUTTON__ACCEPT_ACTION">Accept</button>
+      <button class="minds-group-join-button" (click)="accept()" i18n="@@M__ACTION__ACCEPT">Accept</button>
       <button class="minds-group-join-button" (click)="decline()" i18n="@@GROUPS__JOIN_BUTTON__DECLINE_ACTION">Decline</button>
     </span>
     <button class="minds-group-join-button subscribed " *ngIf="group['is:member']" (click)="leave()" i18n="@@GROUPS__JOIN_BUTTON__LEAVE_ACTION">Leave</button>

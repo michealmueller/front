@@ -28,9 +28,9 @@
     </div>
 
     <button class="mdl-button mdl-button--colored" (click)="save(backgroundFile)" [disabled]="exclusive.saving || exclusive.saved">
-      <ng-container *ngIf="!exclusive.saving && !exclusive.saved" i18n="@@WIRE__CONSOLE__SETTINGS__SAVE_ACTION">Save</ng-container>
+      <ng-container *ngIf="!exclusive.saving && !exclusive.saved" i18n="@@M__ACTION__SAVE">Save</ng-container>
       <ng-container *ngIf="exclusive.saving" i18n="@@WIRE__CONSOLE__SETTINGS__SAVING_LABEL">Saving…</ng-container>
-      <ng-container *ngIf="exclusive.saved" i18n="@@WIRE__CONSOLE__SETTINGS__SAVED_LABEL">Saved</ng-container>
+      <ng-container *ngIf="exclusive.saved" i18n="@@M__COMMON__SAVED">Saved</ng-container>
     </button>
   </div>
 </div>

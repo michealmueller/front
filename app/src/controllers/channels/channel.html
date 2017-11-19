@@ -2,7 +2,7 @@
   <ng-container *ngIf="user?.spam" i18n="@@MINDS__CHANNELS__FLAGGED_AS_SPAM">This user was flagged as spam.</ng-container>
   <ng-container *ngIf="user?.deleted" i18n="@@MINDS__CHANNELS__FLAGGED_AS_DELETED">This user was flagged as deleted.</ng-container>
 
-  <ng-container *ngIf="!session.isAdmin()" i18n="@@MINDS__CHANNELS__APPEAL_ACTION">
+  <ng-container *ngIf="!session.isAdmin()" i18n="@@M__ACTION__APPEAL_MARK">
     If you wish to appeal, please check your <a routerLink="/settings/reported-content">Reported Content console</a>.
   </ng-container>
 </div>
@@ -69,10 +69,10 @@
           <div class="m-channel-bio-editor m-channel-city-editor" *ngIf="editing && isOwner()">
             <div class="m-channel-bio-input m-channel-city-input">
               <i class="material-icons mdl-color-text--blue-grey-300">location_on</i>
-              <input (keyup)="findCity(user.city)" name="city" [(ngModel)]="user.city" class="" placeholder="Enter your city..." i18n-placeholder="@@MINDS__CHANNELS__CITY_INPUT_PLACEHOLDER" />
+              <input (keyup)="findCity(user.city)" name="city" [(ngModel)]="user.city" class="" placeholder="Enter your city..." i18n-placeholder="@@M__COMMON__ENTER_CITY" />
             </div>
             <div class="m-discovery-cities mdl-card mdl-shadow--4dp" *ngIf="editing && cities.length > 0">
-              <p class="mdl-color-text--blue-grey-300" i18n="@@MINDS__CHANNELS__CITY_SELECTOR">Select your city:</p>
+              <p class="mdl-color-text--blue-grey-300" i18n="@@M__COMMON__SELECT_CITY">Select your city:</p>
               <li (click)="setCity(c)" *ngFor="let c of cities" [hidden]="!(c.address.town || c.address.city)">{{c.address.town}}{{c.address.city}}, {{c.address.state}}</li>
             </div>
           </div>
@@ -88,7 +88,7 @@
 
       <div class="m-channel--stats  mdl-tabs__tab-bar">
             <a [routerLink]="['/', user.username, 'feed']" class="mdl-tabs__tab mdl-color-text--blue-grey-500" *ngIf="user.activity_count">
-              <span i18n="Count of activities@@MINDS__CHANNELS__FEED">Feed</span>
+              <span i18n="Count of activities@@M__COMMON__FEED_COUNT">Feed</span>
               <b>{{user.activity_count | number}}</b>
             </a>
             <a class="mdl-tabs__tab mdl-color-text--blue-grey-500" *ngIf="user.supporters_count && session.getLoggedInUser().guid != user.guid">
@@ -100,11 +100,11 @@
               <b>{{user.supporters_count | number}}</b>
             </a>
             <a [routerLink]="['/', user.username, 'subscribers']" class="mdl-tabs__tab mdl-color-text--blue-grey-500">
-              <span i18n="@@MINDS__CHANNELS__SUBSCRIBERS">Subscribers</span>
+              <span i18n="@@M__COMMON__SUBSCRIBERS">Subscribers</span>
               <b>{{user.subscribers_count | number}}</b>
             </a>
             <a class="mdl-tabs__tab  mdl-color-text--blue-grey-500">
-              <span i18n="@@MINDS__CHANNELS__VIEWS">Views</span>
+              <span i18n="@@M__COMMON__VIEWS">Views</span>
               <b>{{user.impressions | number}}</b>
             </a>
         </div>
@@ -117,8 +117,8 @@
               <button>
                 <i [hidden]="editing" class="material-icons">edit</i>
                 <i [hidden]="!editing" class="material-icons">done</i>
-                <span [hidden]="editing" i18n="@@MINDS__CHANNELS__EDIT_ACTION">Edit</span>
-                <span [hidden]="!editing" i18n="@@MINDS__CHANNELS__SAVE_ACTION">Save</span>
+                <span [hidden]="editing" i18n="@@M__ACTION__EDIT">Edit</span>
+                <span [hidden]="!editing" i18n="@@M__ACTION__SAVE">Save</span>
               </button>
             </div>
             <minds-button-boost [object]="user" *ngIf="session.getLoggedInUser().guid == user.guid"></minds-button-boost>
@@ -142,7 +142,7 @@
       <minds-channel-modules [owner]="user" type="image" [linksTo]="['/discovery', user.username, 'images']">
 
         <a class="mdl-card__supporting-text mdl-color-text--grey-600" [routerLink]="['/discovery', user.username, 'images']">
-          <!-- i18n: @@MINDS__CHANNELS__VIEW_MORE -->View More<!-- /i18n -->
+          <!-- i18n: @@M__COMMON__VIEW_MORE -->View More<!-- /i18n -->
         </a>
       </minds-channel-modules>
 
@@ -152,7 +152,7 @@
       <minds-channel-modules [owner]="user" type="video" limit="9" [linksTo]="['/discovery', user.username, 'videos']">
 
         <a class="mdl-card__supporting-text mdl-color-text--grey-600" [routerLink]="['/discovery', user.username, 'videos']">
-          <!-- i18n: @@MINDS__CHANNELS__VIEW_MORE -->View More<!-- /i18n -->
+          <!-- i18n: @@M__COMMON__VIEW_MORE -->View More<!-- /i18n -->
         </a>
       </minds-channel-modules>
 
@@ -162,7 +162,7 @@
       <minds-channel-modules [owner]="user" type="blog" limit="3" [linksTo]="['/blog', user.username]">
 
         <a class="mdl-card__supporting-text mdl-color-text--grey-600" [routerLink]="['/blog', user.username]">
-          <!-- i18n: @@MINDS__CHANNELS__VIEW_MORE -->View More<!-- /i18n -->
+          <!-- i18n: @@M__COMMON__VIEW_MORE -->View More<!-- /i18n -->
         </a>
       </minds-channel-modules>
 

@@ -67,18 +67,31 @@ gulp.task('test', done =>
     done));
 
 // --------------
-// Beautify XLF
-gulp.task('beautify.xlf', done =>
+// Extract to XLF
+gulp.task('extract.xlf', done =>
   runSequence(
-    'beautify.xlf',
+    'extract.xlf',
     done));
 
+// --------------
+// Import XLF
+gulp.task('import.xlf', done =>
+  runSequence(
+    'import.xlf',
+    done));
 
 // --------------
-// Lint XLF
-gulp.task('lint.xlf', done =>
+// Lint Source XLF
+gulp.task('lint.source.xlf', done =>
   runSequence(
-    'lint.xlf',
+    'lint.source.xlf',
+    done));
+
+// --------------
+// Lint Translated XLF
+gulp.task('lint.translated.xlf', done =>
+  runSequence(
+    'lint.translated.xlf',
     done));
 
 // --------------

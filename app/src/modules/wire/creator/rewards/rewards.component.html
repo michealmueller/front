@@ -6,7 +6,7 @@
   <div *ngIf="sums" class="m-wire--creator-rewards--sums">
     <!-- i18n: @@WIRE__CREATOR__REWARDS__YOU_SENT_LABEL -->You have sent<!-- /i18n -->
 
-    <b *ngIf="type == 'points'" i18n="@@WIRE__CREATOR__REWARDS__POINTS_VALUE">
+    <b *ngIf="type == 'points'" i18n="@@M__COMMON__POINTS_WITH_VALUE">
       {{ sums.points | number }} points
     </b>
 
@@ -26,7 +26,7 @@
       >
         <div class="m-wire--creator-rewards--amount">
           <span *ngIf="type == 'money'">{{ reward.amount | currency:'USD':true:'1.0-0' }}</span>
-          <span *ngIf="type == 'points'" i18n="@@WIRE__CREATOR__REWARDS__POINTS_LIST_VALUE">{{ reward.amount | number }} points</span>
+          <span *ngIf="type == 'points'" i18n="@@M__COMMON__POINTS_WITH_VALUE">{{ reward.amount | number }} points</span>
         </div>
         <div class="m-wire--creator-rewards--description"> 
           <p>{{ reward.description }}</p>

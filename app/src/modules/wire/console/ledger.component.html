@@ -8,8 +8,8 @@
 
       <div class="m-wire-console--ledger-method" *ngIf="canSelectMethod()">
         <span>
-          <ng-container *ngIf="method == 'points'" i18n="@@WIRE__CONSOLE__LEDGER__POINTS_METHOD_LABEL">Points</ng-container>
-          <ng-container *ngIf="method == 'money'" i18n="@@WIRE__CONSOLE__LEDGER__USD_METHOD_LABEL">$ USD</ng-container>
+          <ng-container *ngIf="method == 'points'" i18n="@@M__FEATURE__POINTS">Points</ng-container>
+          <ng-container *ngIf="method == 'money'" i18n="@@M__COMMON__SYMBOL_AND_USD">$ USD</ng-container>
         </span>
 
         <button id="m-wire-console-ledger-method" class="mdl-button mdl-js-button mdl-button--icon" [mdl]>
@@ -19,11 +19,11 @@
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="m-wire-console-ledger-method" [mdl]>
           <li class="mdl-menu__item"
             (click)="setMethod('points')"
-            i18n="@@WIRE__CONSOLE__LEDGER__POINTS_METHOD_ACTION"
+            i18n="@@M__FEATURE__POINTS"
           >Points</li>
           <li class="mdl-menu__item"
             (click)="setMethod('money')"
-            i18n="@@WIRE__CONSOLE__LEDGER__USD_METHOD_ACTION"
+            i18n="@@M__COMMON__SYMBOL_AND_USD"
           >$ USD</li>
         </ul>
       </div>
@@ -35,9 +35,9 @@
       <table class="mdl-data-table mdl-js-data-table" [mdl]>
         <thead>
           <tr class="m-wire-console--ledger-header">
-            <th class="mdl-data-table__cell--non-numeric m-data-title" i18n="@@WIRE__CONSOLE__LEDGER__DATE_COLUMN">Date</th>
+            <th class="mdl-data-table__cell--non-numeric m-data-title" i18n="@@M__COMMON__DATE">Date</th>
             <th class="mdl-data-table__cell--non-numeric m-data-title" i18n="@@WIRE__CONSOLE__LEDGER__CHANNEL_COLUMN">Channel</th>
-            <th i18n="@@WIRE__CONSOLE__LEDGER__AMOUNT_COLUMN">Amount</th>
+            <th i18n="@@M__COMMON__COLUMN">Amount</th>
             <th></th>
           </tr>
         </thead>
@@ -53,7 +53,7 @@
                   *ngIf="type == 'received'"i
                   [routerLink]="'/' + wire.from.username"><span>@</span>{{wire.from.username}}</td>
 
-              <td class="m-wire-console--ledger-amount mdl-color-text--green" *ngIf="wire.method == 'points'" i18n="@@WIRE__CONSOLE__LEDGER__AMOUNT_POINTS_CELL_VALUE">{{ wire.amount }} points</td>
+              <td class="m-wire-console--ledger-amount mdl-color-text--green" *ngIf="wire.method == 'points'" i18n="@@M__COMMON__POINTS_WITH_VALUE">{{ wire.amount }} points</td>
               <td class="m-wire-console--ledger-amount mdl-color-text--green" *ngIf="wire.method == 'money'" i18n="@@WIRE__CONSOLE__LEDGER__AMOUNT_USD_CELL_VALUE"><i>$</i>{{ wire.amount }}</td>
 
               <td><i class="material-icons" (click)="expand(i)">keyboard_arrow_down</i></td>

@@ -16,7 +16,7 @@
 
         <div class="m-revenue--options-payout-method-bank--actions"
           (click)="edit()"
-          i18n="@@MONETIZATION__REVENUE__OPTIONS__CHANGE_ACTION"
+          i18n="@@M__ACTION__CHANGE"
         >Change</div>
       </div>
 
@@ -49,7 +49,7 @@
           </div>
 
           <div class="mdl-cell mdl-cell--12-col">
-            <label i18n="@@MONETIZATION__REVENUE__OPTIONS__COUNTRY_LABEL">Country</label>
+            <label i18n="@@M__COMMON__COUNTRY">Country</label>
             <minds-country-input [allowed]="['AT','AU','BE','CA','CH','DE','DK','ES','FI','FR','GB','HK','IE','IT','LU','NL','NO','NZ','PT','SE','SG','US']"
               [country]="form.controls.country.value" (countryChange)="form.controls.country.setValue($event)"></minds-country-input>
           </div>
@@ -70,7 +70,7 @@
               class="mdl-button mdl-button--colored"
               *ngIf="editing"
               (click)="cancelEditing()"
-              i18n="@@MONETIZATION__REVENUE__OPTIONS__CANCEL_ACTION"
+              i18n="@@M__ACTION__CANCEL"
             >Cancel</button>
           </div>
         </div>
@@ -81,14 +81,14 @@
   </div>
 
   <div class="m-revenue--options-cancel mdl-card mdl-shadow--2dp">
-    <h3 class="mdl-color-text--blue-grey-600" i18n="@@MONETIZATION__REVENUE__OPTIONS__CANCEL_MONETIZATION_TITLE">Cancel Monetization</h3>
+    <h3 class="mdl-color-text--blue-grey-600" i18n="@@M__ACTION__CANCEL_MONETIZATION">Cancel Monetization</h3>
 
     <p i18n="@@MONETIZATION__REVENUE__OPTIONS__CANCEL_MONETIZATION_LABEL">Click below to leave the monetization program. You will <b>not</b> be able to rejoin in the future.</p>
     <button
       (click)="leave()"
       [disabled]="leaving"
       class="mdl-button mdl-button--colored mdl-button--raised"
-      i18n="@@MONETIZATION__REVENUE__OPTIONS__CANCEL_MONETIZATION_ACTION"
+      i18n="@@M__ACTION__CANCEL_MONETIZATION"
       >
       Cancel Monetization
     </button>

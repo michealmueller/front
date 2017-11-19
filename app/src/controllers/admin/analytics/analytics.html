@@ -63,27 +63,27 @@
     </div>
 
     <div class="mdl-card">
-      <div class="mdl-card__title" i18n="@@MINDS__ADMIN__ANALYTICS__BOOST_TITLE">Boost</div>
+      <div class="mdl-card__title" i18n="@@M__FEATURE__BOOST">Boost</div>
       <div class="mdl-card__supporting-text">
         <minds-graph-pie [data]="[{ label: 'review', total: boost_newsfeed.percent  }]"></minds-graph-pie>
       </div>
       <div class="mdl-card__supporting-text results">
 
         <div class="row">
-          <label><b i18n="@@MINDS__ADMIN__ANALYTICS__REVIEW_BOOST_ROW">Review</b></label>
+          <label><b i18n="@@M__COMMON__REVIEW">Review</b></label>
           <b>{{boost_newsfeed.review}}</b>
         </div>
         <div class="row">
-          <label><i i18n="@@MINDS__ADMIN__ANALYTICS__REVIEW_BACKLOG_BOOST_ROW">Backlog</i></label>
-          <i i18n="@@MINDS__ADMIN__ANALYTICS__REVIEW_BACKLOG_BOOST_VALUE">{{boost_newsfeed.review_backlog | number:'1.0-0'}} hours</i>
+          <label><i i18n="@@MINDS__ADMIN__ANALYTICS__BACKLOG">Backlog</i></label>
+          <i i18n="@@MINDS__ADMIN__ANALYTICS__BACKLOG_VALUE_HOURS">{{boost_newsfeed.review_backlog | number:'1.0-0'}} hours</i>
         </div>
         <div class="row">
-          <label><b i18n="@@MINDS__ADMIN__ANALYTICS__APPROVED_BOOST_ROW">Approved</b></label>
+          <label><b i18n="@@M__COMMON__APPROVED">Approved</b></label>
           <b>{{boost_newsfeed.approved}}</b>
         </div>
         <div class="row">
-          <label><i i18n="@@MINDS__ADMIN__ANALYTICS__APPROVED_BACKLOG_BOOST_ROW">Backlog</i></label>
-          <i i18n="@@MINDS__ADMIN__ANALYTICS__APPROVED_BACKLOG_BOOST_VALUE">{{boost_newsfeed.approved_backlog | number:'1.0-0'}} hours</i>
+          <label><i i18n="@@MINDS__ADMIN__ANALYTICS__BACKLOG">Backlog</i></label>
+          <i i18n="@@MINDS__ADMIN__ANALYTICS__BACKLOG_VALUE_HOURS">{{boost_newsfeed.approved_backlog | number:'1.0-0'}} hours</i>
         </div>
         <div class="row">
           <label><i i18n="@@MINDS__ADMIN__ANALYTICS__IMPRESSIONS_BOOST_ROW">Impressions</i></label>

@@ -45,10 +45,10 @@ export = (gulp, plugins) => {
       MINDS_RELEASE: release
     }, false);
 
-    let files: string[] = glob.sync(`${APP_SRC}/locale/Minds.*.xlf`);
+    let files: string[] = glob.sync(`${APP_SRC}/locale/Minds.*.xliff`);
 
     files.forEach(file => {
-      let lang = (/Minds\.([a-z\-_]+)\.xlf/g).exec(file)[1];
+      let lang = (/Minds\.([a-z\-_]+)\.xliff/g).exec(file)[1];
       run(`npm run build-i18n`, {
         MINDS_RELEASE: release,
         MINDS_LOCALE: lang
