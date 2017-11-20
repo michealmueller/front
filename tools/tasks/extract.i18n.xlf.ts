@@ -62,8 +62,8 @@ function transform(source, output) {
 
 export = (gulp, plugins) => cb => {
   run(`node_modules/.bin/ng-xi18n -p ${argv.project || '.'} --i18nFormat xlf`, {}, false);
-
-  transform('messages.xlf', join(APP_SRC, 'locale', 'Default.xliff'));
-
+  transform('messages.xlf', join(APP_SRC, 'locale', argv.output || 'Default.xliff'));
   unlinkSync('messages.xlf');
+
+  cb();
 };

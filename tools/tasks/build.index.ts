@@ -9,12 +9,12 @@ import {
   JS_PROD_APP_BUNDLE,
   JS_PROD_SHIMS_BUNDLE,
   LOCALE,
-  LOCALE_INDEX_FILE_NAME
+  LOCALE_AOT_INDEX_FILE_NAME, ENV
 } from '../config';
 
 export = function buildIndex(gulp, plugins) {
   return function () {
-    const filename = LOCALE ? `${LOCALE_INDEX_FILE_NAME}.${LOCALE}.php` : 'index.php';
+    const filename = LOCALE && ENV === 'prod' ? `${LOCALE_AOT_INDEX_FILE_NAME}.${LOCALE}.php` : 'index.php';
 
     return gulp.src(join(APP_SRC, 'index.php'))
       .pipe(plugins.rename(filename))
