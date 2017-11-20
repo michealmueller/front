@@ -12,7 +12,7 @@
         <ng-container *ngIf="editing && type=='money'">$</ng-container>
         <input type="number" *ngIf="editing" [ngModel]="reward.amount" (ngModelChange)="setAmount(i, $event)" [placeholder]="getAmountPlaceholder()" />
         <span *ngIf="editing">+</span>
-        <ng-container *ngIf="type=='points'" i18n="@@WIRE__CHANNEL__TABLE__POINTS_LABEL">points</ng-container>
+        <ng-container *ngIf="type=='points'" i18n="@@M__COMMON__POINTS_SUFFIX">points</ng-container>
 
         <div class="m-wire-channel--reward-send-wire" *ngIf="!editing">
           <i class="ion-icon ion-flash"></i>

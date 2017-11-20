@@ -28,7 +28,7 @@ import { EmbedService } from '../../../services/embed';
 
       <div class="m-modal-share-embed" *ngIf="embedCode">
         <span class="m-modal-share-embed__label mdl-color-text--blue-grey-300">
-          <!-- i18n: @@MODALS__SHARE__EMBED -->Embed into your website:<!-- /i18n -->
+          <!-- i18n: @@M__COMMON__EMBED_INTO_WEBSITE -->Embed into your website:<!-- /i18n -->
         </span>
         <div>
           <textarea (click)="copy($event)" readonly>{{ embedCode }}</textarea>

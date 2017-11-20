@@ -3,7 +3,7 @@
     <h2 class="m-wire-creator--header-svg">
       <i class="ion-icon ion-flash"></i>
 
-      <span i18n="@@WIRE__CREATOR__WIRE_TITLE">Wire</span>
+      <span i18n="@@M__FEATURE__WIRE">Wire</span>
     </h2>
 
     <p class="m-wire-creator--subtext" i18n="@@WIRE__CREATOR__WIRE_NOTICE">
@@ -30,10 +30,10 @@
       >
         <div class="m-wire--creator-selector-type">
           <i class="material-icons">account_balance</i>
-          <h4 i18n="@@WIRE__CREATOR__POINTS_ITEM">Points</h4>
+          <h4 i18n="@@M__FEATURE__POINTS">Points</h4>
         </div>
-        <span class="m-wire--creator-selector--cta" i18n="@@WIRE__CREATOR__POINTS_ITEM_CTA">Select Points</span>
-        <span class="m-wire--creator-selector--selected-label" i18n="@@WIRE__CREATOR__SELECTED_LABEL">Selected</span>
+        <span class="m-wire--creator-selector--cta" i18n="@@M__COMMON__SELECT_POINTS">Select Points</span>
+        <span class="m-wire--creator-selector--selected-label" i18n="@@M__COMMON__SELECTED">Selected</span>
       </li>
 
       <li
@@ -43,11 +43,11 @@
       >
         <div class="m-wire--creator-selector-type">
           <i class="material-icons">attach_money</i>
-          <h4 i18n="@@WIRE__CREATOR__USD_ITEM">USD</h4>
+          <h4 i18n="@@M__COMMON__USD">USD</h4>
         </div>
-        <span class="m-wire--creator-selector--cta" *ngIf="owner?.merchant" i18n="@@WIRE__CREATOR__USD_ITEM_CTA">Select Money</span>
+        <span class="m-wire--creator-selector--cta" *ngIf="owner?.merchant" i18n="@@M__COMMON__SELECT_MONEY">Select Money</span>
         <span class="m-wire--creator-selector--cta" *ngIf="!owner?.merchant" i18n="@@WIRE__CREATOR__USD_ITEM_CTA_DISABLED">Cannot receive USD</span>
-        <span class="m-wire--creator-selector--selected-label" i18n="@@WIRE__CREATOR__SELECTED_LABEL">Selected</span>
+        <span class="m-wire--creator-selector--selected-label" i18n="@@M__COMMON__SELECTED">Selected</span>
       </li>
 
       <li class="m-wire--creator-selector--disabled">
@@ -68,7 +68,7 @@
       ></minds-payments-stripe-checkout>
       <div class="m-wire--creator-payment-attached" *ngIf="wire.payload">
         <i class="material-icons">check_circle</i>
-        <span><!-- i18n: @@WIRE__CREATOR__PAYMENT_ATTACHED -->Your payment is attached.<!-- /i18n --> <b (click)="wire.payload = null" i18n="@@WIRE__CREATOR__CHANGE_PAYMENT">Change</b></span>
+        <span><!-- i18n: @@M__COMMON__PAYMENT_ATTACHED -->Your payment is attached.<!-- /i18n --> <b (click)="wire.payload = null" i18n="@@M__ACTION__CHANGE">Change</b></span>
       </div>
     </div>
   </section>
@@ -99,8 +99,8 @@
       <span class="m-wire--creator-wide-input--label"
         (click)="amountEditorFocus()"
       >
-        <ng-container *ngIf="wire.currency == 'points'" i18n="@@WIRE__CREATOR__AMOUNT_INPUT_POINTS_LABEL">points</ng-container>
-        <ng-container *ngIf="wire.currency == 'money'" i18n="@@WIRE__CREATOR__AMOUNT_INPUT_USD_LABEL">USD</ng-container>
+        <ng-container *ngIf="wire.currency == 'points'" i18n="points input|@@M__COMMON__POINTS_INPUT">points</ng-container>
+        <ng-container *ngIf="wire.currency == 'money'" i18n="usd input|@@M__COMMON__USD_INPUT">USD</ng-container>
         <!-- TODO: BTC -->
       </span>
     </div>

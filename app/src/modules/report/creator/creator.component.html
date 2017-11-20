@@ -2,7 +2,7 @@
 
   <div class="m-report-creator--header">
     <h2>
-      <span i18n="@@REPORT__CREATOR__REPORT_TITLE">Report</span>
+      <span i18n="Report as flag something@@M__COMMON__REPORT">Report</span>
     </h2>
   </div>
 
@@ -77,17 +77,17 @@
 
   <div *ngIf="!inProgress && success" class="m-report-creator--success">
     <p>
-      <!-- i18n: @@REPORT__CREATOR__SUCCESS_NOTE -->Thanks for letting us know! We appreciate your effort to keep Minds safe and secure.<!-- /i18n -->
+      <!-- i18n: @@M__COMMON__THANKS_LET_US_KNOW_KEEP_MINDS_SAFE -->Thanks for letting us know! We appreciate your effort to keep Minds safe and secure.<!-- /i18n -->
     </p>
 
     <p>
-      <!-- i18n: @@REPORT__CREATOR__SUCCESS_REVIEW_NOTE -->We will review your report as soon as possible.<!-- /i18n -->
+      <!-- i18n: @@M__COMMON__REVIEW_REPORT_ASAP -->We will review your report as soon as possible.<!-- /i18n -->
     </p>
   </div>
 
   <div class="m-report-creator--close" *ngIf="success || (next && subject === 10)">
     <button class="m-report-creator--button" (click)="close()">
-    <!-- i18n: @@REPORT__CREATOR__CLOSE_ACTION -->CLOSE<!-- /i18n -->
+    <!-- i18n: @@M__ACTION__CLOSE__CAPS -->CLOSE<!-- /i18n -->
     </button>
   </div>
 

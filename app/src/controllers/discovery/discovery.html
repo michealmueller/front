@@ -1,8 +1,8 @@
 <div class="mdl-tabs__tab-bar">
     <a [routerLink]="['/discovery', _filter, 'albums']" class="mdl-tabs__tab" [ngClass]="{'is-active': _type == 'albums' || _type == 'all'}" [hidden]="_filter != 'owner'" i18n="@@MINDS__DISCOVERY__ALBUMS_TAB">Albums</a>
-    <a [routerLink]="['/discovery', _filter, 'videos']" class="mdl-tabs__tab" [ngClass]="{'is-active': _type == 'videos' || _type == 'all'}" i18n="@@MINDS__DISCOVERY__VIDEOS_TAB">Videos</a>
-    <a [routerLink]="['/discovery', _filter, 'images']" class="mdl-tabs__tab" [ngClass]="{'is-active': _type == 'images' || _type == 'all'}" i18n="@@MINDS__DISCOVERY__IMAGES_TAB">Images</a>
-    <a [routerLink]="['/discovery', _filter, 'channels']" class="mdl-tabs__tab" [ngClass]="{'is-active': _type == 'channels' || _type == 'all'}" [hidden]="_filter == 'owner' || _owner" i18n="@@MINDS__DISCOVERY__CHANNELS_TAB">Channels</a>
+    <a [routerLink]="['/discovery', _filter, 'videos']" class="mdl-tabs__tab" [ngClass]="{'is-active': _type == 'videos' || _type == 'all'}" i18n="@@M__FEATURE__VIDEO_PLURAL">Videos</a>
+    <a [routerLink]="['/discovery', _filter, 'images']" class="mdl-tabs__tab" [ngClass]="{'is-active': _type == 'images' || _type == 'all'}" i18n="@@M__FEATURE__IMAGE_PLURAL">Images</a>
+    <a [routerLink]="['/discovery', _filter, 'channels']" class="mdl-tabs__tab" [ngClass]="{'is-active': _type == 'channels' || _type == 'all'}" [hidden]="_filter == 'owner' || _owner" i18n="@@M__FEATURE__CHANNEL__PLURAL">Channels</a>
 </div>
 
 <div class="mdl-grid m-discovery-{{_filter}} m-discovery-{{_filter}}-{{_type}}" style="max-width:900px">
@@ -10,7 +10,7 @@
     <a class="mdl-cell mdl-cell--4-col" [routerLink]="['/capture']" style="text-decoration: none;" [hidden]="_type == 'channels' || _filter == 'suggested'">
       <div class="minds-add-card mdl-card mdl-shadow--2dp mdl-color--blue-grey-400 mdl-color-text--blue-grey-100">
         <i class="material-icons">file_upload</i>
-        <h3 i18n="@@MINDS__DISCOVERY__UPLOAD_ACTION">Upload</h3>
+        <h3 i18n="@@M__ACTION__UPLOAD">Upload</h3>
       </div>
     </a>
 
@@ -29,10 +29,10 @@
             <option value="100">100 <!-- i18n: @@MINDS__DISCOVERY__MILES_UNIT -->miles<!-- /i18n --></option>
           </select>
           <m-18n i18n="Distance from a city@@MINDS__DISCOVERY__OF_WORD">of</m-18n>
-          <input (keyup)="findCity(city)" name="city" [(ngModel)]="city" class="mdl-color--blue-grey-300 mdl-color-text--white" placeholder="Enter your city..." i18n-placeholder="@@MINDS__DISCOVERY__CITY_INPUT_PLACEHOLDER" />
+          <input (keyup)="findCity(city)" name="city" [(ngModel)]="city" class="mdl-color--blue-grey-300 mdl-color-text--white" placeholder="Enter your city..." i18n-placeholder="@@M__COMMON__ENTER_CITY" />
         </span>
         <div class="m-discovery-cities mdl-card mdl-shadow--4dp" *ngIf="cities.length > 0">
-          <p class="mdl-color-text--blue-grey-300" i18n="@@MINDS__DISCOVERY__CITY_SELECT_LABEL">Select your city:</p>
+          <p class="mdl-color-text--blue-grey-300" i18n="@@M__COMMON__SELECT_CITY">Select your city:</p>
           <li (click)="setCity(c)" *ngFor="let c of cities" [hidden]="!(c.address.town || c.address.city)">{{c.address.town}}{{c.address.city}}, {{c.address.state}}</li>
         </div>
       </div>

@@ -82,7 +82,7 @@
           <!-- i18n: @@NOTIFICATIONS__NOTIFICATION__COMMENT_ACTIVITY_OTHER -->{{notification.fromObj.name}} commented on <span class="pseudo-link mdl-color-text--blue-grey-400">{{notification.entityObj.ownerObj.name}}'s activity</span><!-- /i18n -->
         </p>
         <p *ngIf="notification.entityObj.title">
-          <!-- i18n: @@NOTIFICATIONS__NOTIFICATION__COMMENT_ACTIVITY_WITH_TITLE -->{{notification.fromObj.name}} commented on <span class="pseudo-link mdl-color-text--blue-grey-400">{{notification.entityObj.title | excerpt}}</span><!-- /i18n -->
+          <!-- i18n: @@NOTIFICATIONS__NOTIFICATION__COMMENT_X_ON_Y -->{{notification.fromObj.name}} commented on <span class="pseudo-link mdl-color-text--blue-grey-400">{{notification.entityObj.title | excerpt}}</span><!-- /i18n -->
         </p>
       </a>
 
@@ -91,7 +91,7 @@
 
         <div *ngIf="notification.entityObj.subtype == 'blog'">
           <a [routerLink]="['/blog/view', notification.entityObj.guid]">
-            <p i18n="@@NOTIFICATIONS__NOTIFICATION__COMMENT_BLOG">{{notification.fromObj.name}} commented on <span class="pseudo-link mdl-color-text--blue-grey-400">{{notification.entityObj.title | excerpt}}</span></p>
+            <p i18n="@@NOTIFICATIONS__NOTIFICATION__COMMENT_X_ON_Y">{{notification.fromObj.name}} commented on <span class="pseudo-link mdl-color-text--blue-grey-400">{{notification.entityObj.title | excerpt}}</span></p>
           </a>
         </div>
 
@@ -124,7 +124,7 @@
         <p>
           <!-- i18n: @@NOTIFICATIONS__NOTIFICATION__LIKE__VOTED_UP_OBJECT -->{{notification.fromObj.name}} voted up<!-- /i18n -->
           <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj.title">{{notification.entityObj.title | excerpt}}</span>
-          <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="!notification.entityObj.title" i18n="object belonging to current user@@NOTIFICATIONS__NOTIFICATION__LIKE__YOUR_OBJECT">your {{notification.entityObj.subtype}}</span>
+          <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="!notification.entityObj.title" i18n="object belonging to current user@@NOTIFICATIONS__NOTIFICATION__OWN_OBJECT">your {{notification.entityObj.subtype}}</span>
         </p>
       </a>
       <a [routerLink]="['/newsfeed', notification.entityObj.guid]" *ngIf="notification.entityObj.type == 'activity'">
@@ -166,7 +166,7 @@
         <p>
           <!-- i18n: @@NOTIFICATIONS__NOTIFICATION__DOWNVOTE__VOTED_DOWN_OBJECT -->{{notification.fromObj.name}} down voted<!-- /i18n -->
               <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj.title">{{notification.entityObj.title | excerpt}}</span>
-              <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="!notification.entityObj.title" i18n="object belonging to current user@@NOTIFICATIONS__NOTIFICATION__DOWNVOTE__YOUR_OBJECT">your {{notification.entityObj.subtype}}</span>
+              <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="!notification.entityObj.title" i18n="object belonging to current user@@NOTIFICATIONS__NOTIFICATION__OWN_OBJECT">your {{notification.entityObj.subtype}}</span>
         </p>
       </a>
       <a [routerLink]="['/newsfeed', notification.entityObj.guid]" *ngIf="notification.entityObj.type == 'activity'">
@@ -207,7 +207,7 @@
       <a [routerLink]="['/newsfeed', notification.entityObj.guid]" *ngIf="notification.entityObj.type == 'object'">
           <p><!-- i18n: @@NOTIFICATIONS__NOTIFICATION__REMIND__REMINDED -->{{notification.fromObj.name}} reminded<!-- /i18n -->
               <span class="pseudo-link mdl-color-text--blue-grey-400"  *ngIf="notification.entityObj.title">{{notification.entityObj.title | excerpt}}</span>
-              <span class="pseudo-link mdl-color-text--blue-grey-400"  *ngIf="!notification.entityObj.title" i18n="object belonging to current user@@NOTIFICATIONS__NOTIFICATION__REMINDED__YOUR_OBJECT">your {{notification.entityObj.subtype}}</span>
+              <span class="pseudo-link mdl-color-text--blue-grey-400"  *ngIf="!notification.entityObj.title" i18n="object belonging to current user@@NOTIFICATIONS__NOTIFICATION__OWN_OBJECT">your {{notification.entityObj.subtype}}</span>
          </p>
       </a>
       <a [routerLink]="['/newsfeed', notification.entityObj.guid]" *ngIf="notification.entityObj.type == 'activity'">
@@ -289,7 +289,7 @@
   <!-- P2P boost submitted -->
   <ng-template ngSwitchCase="boost_submitted_p2p">
       <a [routerLink]="notification.entityObj.type == 'activity' ? ['/newsfeed', notification.entityObj.guid] : ['/wallet/boost/content']">
-        <p><!-- i18n: @@NOTIFICATIONS__NOTIFICATION__BOOST_SUBMITTED_P2P__POINTS_FOR -->{{notification.params.points}} points <span *ngIf="notification.entityObj">for</span><!-- /i18n -->
+        <p><!-- i18n: @@NOTIFICATIONS__NOTIFICATION__X_POINTS_FOR -->{{notification.params.points}} points <span *ngIf="notification.entityObj">for</span><!-- /i18n -->
           <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && notification.entityObj.title">{{notification.entityObj.title | excerpt}}</span>
           <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && notification.entityObj.name">{{notification.entityObj.name}}</span>
           <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && !notification.entityObj.name && notification.entityObj.type !== 'user'" i18n="@@NOTIFICATIONS__NOTIFICATION__YOUR_POST">your post</span>
@@ -340,14 +340,14 @@
   <!-- Boost accepted -->
   <ng-template ngSwitchCase="boost_accepted">
     <a [routerLink]="notification.entityObj.type == 'activity' ? ['/newsfeed', notification.entityObj.guid] : ['/wallet/boost/content']">
-      <p *ngIf="notification.params.impressions"><!-- i18n: @@NOTIFICATIONS__NOTIFICATION__IMPRESSIONS_FOR -->{{notification.params.impressions}} points <span *ngIf="notification.entityObj">for</span><!-- /i18n -->
+      <p *ngIf="notification.params.impressions"><!-- i18n: @@NOTIFICATIONS__NOTIFICATION__X_POINTS_FOR -->{{notification.params.impressions}} points <span *ngIf="notification.entityObj">for</span><!-- /i18n -->
         <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && notification.entityObj.title">{{notification.entityObj.title | excerpt}}</span>
         <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && notification.entityObj.name">{{notification.entityObj.name}}</span>
         <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && !notification.entityObj.name && notification.entityObj.type !== 'user'" i18n="@@NOTIFICATIONS__NOTIFICATION__YOUR_POST">your post</span>
         <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && !notification.entityObj.name && notification.entityObj.type === 'user'" i18n="@@NOTIFICATIONS__NOTIFICATION__YOUR_CHANNEL">your channel</span>
         <!-- i18n: @@NOTIFICATIONS__NOTIFICATION__BOOST_ACCEPTED__WERE_ACCEPTED -->were accepted.<!-- /i18n -->
       </p>
-      <p *ngIf="notification.params.points"><!-- i18n: @@NOTIFICATIONS__NOTIFICATION__BOOST_ACCEPTED__POINTS_FOR -->{{notification.params.points}} points <span *ngIf="notification.entityObj">for</span><!-- /i18n -->
+      <p *ngIf="notification.params.points"><!-- i18n: @@NOTIFICATIONS__NOTIFICATION__X_POINTS_FOR -->{{notification.params.points}} points <span *ngIf="notification.entityObj">for</span><!-- /i18n -->
         <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && notification.entityObj.title">{{notification.entityObj.title | excerpt}}</span>
         <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && notification.entityObj.name">{{notification.entityObj.name}}</span>
         <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && !notification.entityObj.name && notification.entityObj.type !== 'user'" i18n="@@NOTIFICATIONS__NOTIFICATION__YOUR_POST">your post</span>
@@ -376,10 +376,10 @@
         <!-- i18n: @@NOTIFICATIONS__NOTIFICATION__BOOST_PEER_REQUEST__IS_OFFERING --><b>@{{notification.from.username}}</b> is offering<!-- /i18n -->
         <b>
           {{notification.params.bid}}
-          <span [hidden]="notification.params.type != 'pro'" i18n="@@NOTIFICATIONS__NOTIFICATION__BOOST_PEER_REQUEST__USD">USD</span>
-          <span [hidden]="notification.params.type != 'points'" i18n="@@NOTIFICATIONS__NOTIFICATION__BOOST_PEER_REQUEST__POINTS">points</span>
+          <span [hidden]="notification.params.type != 'pro'" i18n="@@M__COMMON__USD">USD</span>
+          <span [hidden]="notification.params.type != 'points'" i18n="@@M__COMMON__POINTS_SUFFIX">points</span>
         </b>
-        <span *ngIf="notification.entityObj" i18n="@@NOTIFICATIONS__NOTIFICATION__BOOST_PEER_REQUEST__FOR">for</span>
+        <span *ngIf="notification.entityObj" i18n="@@NOTIFICATIONS__NOTIFICATION__FOR_WORD">for</span>
         <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && notification.entityObj.title">{{notification.entityObj.title | excerpt}}</span>
         <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && notification.entityObj.name">{{notification.entityObj.name}}</span>
         <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && !notification.entityObj.name && notification.entityObj.type !== 'user'" i18n="@@NOTIFICATIONS__NOTIFICATION__THEIR_POST">their post</span>
@@ -395,8 +395,8 @@
         <!-- i18n: @@NOTIFICATIONS__NOTIFICATION__BOOST_PEER_ACCEPTED__ACCEPTED_BID --><b>@{{notification.from.username}}</b> accepted your bid of<!-- /i18n -->
         <b>
           {{notification.params.bid}}
-          <span [hidden]="notification.params.type != 'pro'" i18n="@@NOTIFICATIONS__NOTIFICATION__BOOST_PEER_ACCEPTED__USD">USD</span>
-          <span [hidden]="notification.params.type != 'points'" i18n="@@NOTIFICATIONS__NOTIFICATION__BOOST_PEER_ACCEPTED__POINTS">points</span>
+          <span [hidden]="notification.params.type != 'pro'" i18n="@@M__COMMON__USD">USD</span>
+          <span [hidden]="notification.params.type != 'points'" i18n="@@M__COMMON__POINTS_SUFFIX">points</span>
         </b>
         <span *ngIf="notification.entityObj">for</span>
         <span class="pseudo-link mdl-color-text--blue-grey-400"  *ngIf="notification.entityObj && notification.entityObj.title">{{notification.entity.title | excerpt}}</span>
@@ -413,10 +413,10 @@
         <!-- i18n: @@NOTIFICATIONS__NOTIFICATION__BOOST_PEER_REJECTED__DECLINED_BID --><b>@{{notification.from.username}}</b> declined your bid of<!-- /i18n -->
         <b>
           {{notification.params.bid}}
-          <span [hidden]="notification.params.type != 'pro'" i18n="@@NOTIFICATIONS__NOTIFICATION__BOOST_PEER_REJECTED__USD">USD</span>
-          <span [hidden]="notification.params.type != 'points'" i18n="@@NOTIFICATIONS__NOTIFICATION__BOOST_PEER_REJECTED__POINTS">points</span>
+          <span [hidden]="notification.params.type != 'pro'" i18n="@@M__COMMON__USD">USD</span>
+          <span [hidden]="notification.params.type != 'points'" i18n="@@M__COMMON__POINTS_SUFFIX">points</span>
         </b>
-        <span *ngIf="notification.entityObj" i18n="X points _for_ entity@@NOTIFICATIONS__NOTIFICATION__BOOST_PEER_REJECTED__FOR_ENTITY">for</span>
+        <span *ngIf="notification.entityObj" i18n="X points _for_ entity@@NOTIFICATIONS__NOTIFICATION__FOR_WORD">for</span>
         <span class="pseudo-link mdl-color-text--blue-grey-400"  *ngIf="notification.entityObj && notification.entityObj.title">{{notification.entity.title | excerpt}}</span>
         <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && notification.entityObj.type !== 'user'" i18n="@@NOTIFICATIONS__NOTIFICATION__YOUR_POST">your post</span>
         <span class="pseudo-link mdl-color-text--blue-grey-400" *ngIf="notification.entityObj && !notification.entityObj.title && notification.entityObj.type === 'user'" i18n="@@NOTIFICATIONS__NOTIFICATION__YOUR_CHANNEL">your channel</span>
@@ -585,7 +585,7 @@
       <!-- Default -->
       <a *ngIf="notification.entityObj.type != 'comment' && notification.entityObj.type != 'activity'">
         <p style="font-style:italic">
-        <!-- i18n: @@NOTIFICATIONS__NOTIFICATION__REPORT_ACTIONED__ERROR_VIEWING -->There was an error viewing this notification.<!-- /i18n -->
+        <!-- i18n: @@NOTIFICATIONS__NOTIFICATION__ERROR_VIEWING -->There was an error viewing this notification.<!-- /i18n -->
         </p>
       </a>
     </div> 

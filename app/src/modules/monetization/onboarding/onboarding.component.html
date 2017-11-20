@@ -3,19 +3,19 @@
   <div class="mdl-grid">
 
     <div class="mdl-cell mdl-cell--12-col">
-      <label i18n="@@MONETIZATION__ONBOARDING__COUNTRY_LABEL">Country</label>
+      <label i18n="@@M__COMMON__COUNTRY">Country</label>
       <minds-country-input [allowed]="['AT','AU','BE','CA','CH','DE','DK','ES','FI','FR','GB','HK','IE','IT','LU','NL','NO','NZ','PT','SE','SG','US']"
         [country]="form.controls.country.value" (countryChange)="form.controls.country.setValue($event)"></minds-country-input>
     </div>
 
     <div class="mdl-cell mdl-cell--6-col" *ngIf="!isCountry(['JP'])">
-      <label i18n="@@MONETIZATION__ONBOARDING__FIRST_NAME_LABEL">First name</label>
-      <input formControlName="firstName" type="text" placeholder="First name" i18n-placeholder="@@MONETIZATION__ONBOARDING__FIRST_NAME_PLACEHOLDER">
+      <label i18n="@@M__COMMON__FIRST_NAME">First name</label>
+      <input formControlName="firstName" type="text" placeholder="First name" i18n-placeholder="@@M__COMMON__FIRST_NAME">
     </div>
 
     <div class="mdl-cell mdl-cell--6-col" *ngIf="!isCountry(['JP'])">
-      <label i18n="@@MONETIZATION__ONBOARDING__LAST_NAME_LABEL">Last name</label>
-      <input formControlName="lastName" type="text" placeholder="Last name" i18n-placeholder="@@MONETIZATION__ONBOARDING__LAST_NAME_PLACEHOLDER">
+      <label i18n="@@M__COMMON__LAST_NAME">Last name</label>
+      <input formControlName="lastName" type="text" placeholder="Last name" i18n-placeholder="@@M__COMMON__LAST_NAME">
     </div>
 
     <div class="mdl-cell mdl-cell--6-col">
@@ -68,7 +68,7 @@
     </div>
 
     <div class="mdl-cell mdl-cell--6-col" *ngIf="isCountry(['US'])">
-      <label i18n="@@MONETIZATION__ONBOARDING__STATE_LABEL">State</label>
+      <label i18n="State as a country entity@@M__COMMON__COUNTRY_STATE">State</label>
       <minds-state-input [state]="form.controls.state.value" (stateChange)="form.controls.state.setValue($event)" [disabled]="restrictAsVerified"></minds-state-input>
     </div>
 

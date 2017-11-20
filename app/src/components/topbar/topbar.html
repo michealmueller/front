@@ -18,7 +18,7 @@
     <button class="mdl-button mdl-color-text--white mdl-button--colored mdl-button--raised m-boost-button-fat"
       [routerLink]="['/wallet/boost/newsfeed', { 'toggled':true}]"
       *ngIf="session.isLoggedIn()">
-      <!-- i18n: Boost as Minds action@@MINDS__TOPBAR__BOOST -->Boost<!-- /i18n -->
+      <!-- i18n: verb|@@M__ACTION__BOOST -->Boost<!-- /i18n -->
     </button>
 
     <minds-topbar-navigation></minds-topbar-navigation>
@@ -46,7 +46,7 @@
     </ul>
 
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" *ngIf="!session.isLoggedIn()" [routerLink]="['/login']">
-      <!-- i18n: @@MINDS__TOPBAR__LOGIN -->Login<!-- /i18n -->
+      <!-- i18n: @@M__ACTION__LOGIN -->Login<!-- /i18n -->
     </button>
 </div>
 

@@ -45,7 +45,7 @@ import { BanModalComponent } from '../../../ban/modal/modal.component';
         *ngIf="session.isAdmin()"
         [hidden]="user.spam"
         (click)="setSpam(true); showMenu = false"
-        i18n="@@MINDS__BUTTONS__USER_DROPDOWN__MARK_AS_SPAM"
+        i18n="@@M__ACTION__MARK_SPAM"
         >
         Mark as spam
       </li>
@@ -53,7 +53,7 @@ import { BanModalComponent } from '../../../ban/modal/modal.component';
         *ngIf="session.isAdmin()"
         [hidden]="!user.spam"
         (click)="setSpam(false); showMenu = false"
-        i18n="@@MINDS__BUTTONS__USER_DROPDOWN__NOT_SPAM"
+        i18n="@@M__ACTION__NOT_SPAM"
         >
         Not spam
       </li>
@@ -66,7 +66,7 @@ import { BanModalComponent } from '../../../ban/modal/modal.component';
       (closed)="banToggle = false"
       (actioned)="ban($event)"
       yesButton="Ban user"
-      i18n-yesButton="@@MINDS__BUTTONS__USER_DROPDOWN__BAN_USER_CONFIRM_BUTTON"
+      i18n-yesButton="@@M__ACTION__BAN_USER"
     >
       <p confirm-message i18n="@@MINDS__BUTTONS__USER_DROPDOWN__BAN_USER_CONFIRM_MESSAGE">
           Are you sure you want to ban this user?<br><br>
@@ -82,7 +82,7 @@ import { BanModalComponent } from '../../../ban/modal/modal.component';
       (closed)="banMonetizationToggle = false"
       (actioned)="banMonetization($event)"
       yesButton="Ban user"
-      i18n-yesButton="@@MINDS__BUTTONS__USER_DROPDOWN__BAN_MONETIZATION_CONFIRM_BUTTON"
+      i18n-yesButton="@@M__ACTION__BAN_USER"
     >
       <p confirm-message i18n="@@MINDS__BUTTONS__USER_DROPDOWN__BAN_MONETIZATION_CONFIRM_MESSAGE">
           Are you sure you want to ban this user from monetization?<br><br>

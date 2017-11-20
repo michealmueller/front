@@ -11,13 +11,13 @@
       (click)="save()"
       style="float:right"
       >
-      <!-- i18n: @@MINDS__SETTINGS__SAVE -->Save<!-- /i18n -->
+      <!-- i18n: @@M__ACTION__SAVE -->Save<!-- /i18n -->
     </button>
     <button class="mdl-button mdl-button--colored"
       [hidden]="!saved"
       style="float:right"
       >
-      <!-- i18n: @@MINDS__SETTINGS__SAVED -->Saved<!-- /i18n -->
+      <!-- i18n: @@M__COMMON__SAVED -->Saved<!-- /i18n -->
     </button>
   </div>
   <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate" [hidden]="!inProgress"></div>
@@ -146,7 +146,7 @@
 <!-- START: FB connect -->
 <div class="mdl-card mdl-shadow--2dp m-settings--facebook" *ngIf="thirdpartynetworks.hasIntegration('facebook')">
   <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text" i18n="@@MINDS__SETTINGS__FACEBOOK_TITLE">Facebook</h2>
+    <h2 class="mdl-card__title-text" i18n="@@M__NAMES__FACEBOOK">Facebook</h2>
   </div>
   <div class="mdl-card__supporting-text" *ngIf="minds.user.signup_method == 'facebook'">
     <button class="mdl-button mdl-button--raised mdl-button--accent" (click)="removeFbLogin()" [disabled]="thirdpartynetworks.inProgress">
@@ -169,7 +169,7 @@
 <!-- START: Tw connect -->
 <div class="mdl-card mdl-shadow--2dp m-settings--twitter" *ngIf="thirdpartynetworks.hasIntegration('twitter')">
   <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text" i18n="@@MINDS__SETTINGS__TWITTER">Twitter</h2>
+    <h2 class="mdl-card__title-text" i18n="@@M__NAMES__TWITTER">Twitter</h2>
   </div>
   <div class="mdl-card__supporting-text" *ngIf="thirdpartynetworks.isConnected('twitter')">
     <button class="mdl-button mdl-button--raised mdl-button--accent" (click)="removeTw()" [disabled]="thirdpartynetworks.inProgress">
@@ -197,7 +197,6 @@
     <select name="language" [ngModel]="language" (ngModelChange)="language = $event; change()">
       <option value="en">English</option>
       <option value="es">Español</option>
-      <option value="fr">Français</option>
     </select>
   </div>
 

@@ -1,8 +1,8 @@
 <div class="mdl-card__title" [routerLink]="linksTo">
   <h2 class="mdl-card__title-text" style="text-transform:capitalize" [ngSwitch]="type">
-    <ng-template ngSwitchCase="image" i18n="@@CHANNEL__MODULES__IMAGES_TITLE">Images</ng-template>
-    <ng-template ngSwitchCase="video" i18n="@@CHANNEL__MODULES__VIDEOS_TITLE">Videos</ng-template>
-    <ng-template ngSwitchCase="blog" i18n="@@CHANNEL__MODULES__BLOGS_TITLE">Blogs</ng-template>
+    <ng-template ngSwitchCase="image" i18n="@@M__FEATURE__IMAGE_PLURAL">Images</ng-template>
+    <ng-template ngSwitchCase="video" i18n="@@M__FEATURE__VIDEO_PLURAL">Videos</ng-template>
+    <ng-template ngSwitchCase="blog" i18n="@@M__FEATURE__BLOG_PLURAL">Blogs</ng-template>
     <ng-template ngSwitchDefault>{{ type }}</ng-template>
   </h2>
 </div>

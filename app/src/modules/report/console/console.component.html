@@ -1,8 +1,8 @@
 <div class="mdl-tabs__tab-bar m-report-console--tabs">
-  <a (click)="setFilter('review')" class="mdl-tabs__tab" [ngClass]="{ 'is-active': filter == 'review' }" i18n="@@REPORT__CONSOLE__REVIEW_PENDING_TAB">Review Pending</a>
+  <a (click)="setFilter('review')" class="mdl-tabs__tab" [ngClass]="{ 'is-active': filter == 'review' }" i18n="@@M__COMMON__REVIEW_PENDING">Review Pending</a>
   <a (click)="setFilter('pending')" class="mdl-tabs__tab" [ngClass]="{ 'is-active': filter == 'pending' }" i18n="@@REPORT__CONSOLE__APPEALED_TAB">Appealed</a>
-  <a (click)="setFilter('approved')" class="mdl-tabs__tab" [ngClass]="{ 'is-active': filter == 'approved' }" i18n="@@REPORT__CONSOLE__APPROVED_TAB">Approved</a>
-  <a (click)="setFilter('rejected')" class="mdl-tabs__tab" [ngClass]="{ 'is-active': filter == 'rejected' }" i18n="@@REPORT__CONSOLE__REJECTED_TAB">Rejected</a>
+  <a (click)="setFilter('approved')" class="mdl-tabs__tab" [ngClass]="{ 'is-active': filter == 'approved' }" i18n="@@M__COMMON__APPROVED">Approved</a>
+  <a (click)="setFilter('rejected')" class="mdl-tabs__tab" [ngClass]="{ 'is-active': filter == 'rejected' }" i18n="@@M__COMMON__REJECTED">Rejected</a>
 </div>
 
 <div *ngFor="let appeal of appeals; let i = index"
@@ -41,13 +41,13 @@
 
   <div *ngIf="appeal.entityObj && appeal.entityObj.type == 'comment'" class="m-comment-wrapper">
     <div class="m-report-console--comment-note">
-      <a target="_blank" [routerLink]="['/newsfeed', appeal.entityObj.parent_guid]" i18n="@@REPORT__CONSOLE__VIEW_PARENT">View parent and its comment thread</a>
+      <a target="_blank" [routerLink]="['/newsfeed', appeal.entityObj.parent_guid]" i18n="@@M__COMMON__VIEW_PARENT_COMMENT_THREAD">View parent and its comment thread</a>
     </div>
     <minds-card-comment [object]="appeal.entityObj" class="mdl-card"></minds-card-comment>
   </div>
 
   <div *ngIf="!appeal.entityObj" class="m-comment-wrapper">
-    <div class="m-report-console--comment-note" i18n="@@REPORT__CONSOLE__POST_NOT_FOUND">
+    <div class="m-report-console--comment-note" i18n="@@M__COMMON__POST_NOT_FOUND">
       Post not found
     </div>
   </div>

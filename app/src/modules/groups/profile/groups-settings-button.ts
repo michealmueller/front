@@ -25,10 +25,10 @@ import { GroupsService } from '../groups-service';
       </div>
       <div class="mdl-card__actions">
         <button (click)="delete()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-          <!-- i18n: @@GROUPS__PROFILE__GROUP_SETTINGS_BTN__CONFIRM_ACTION -->Confirm<!-- /i18n -->
+          <!-- i18n: @@M__ACTION__CONFIRM -->Confirm<!-- /i18n -->
         </button>
         <button (click)="cancelDelete()" class="mdl-button mdl-js-button mdl-button--colored">
-          <!-- i18n: @@GROUPS__PROFILE__GROUP_SETTINGS_BTN__CANCEL_ACTION -->Cancel<!-- /i18n -->
+          <!-- i18n: @@M__ACTION__CANCEL -->Cancel<!-- /i18n -->
         </button>
       </div>
     </m-modal>

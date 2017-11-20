@@ -20,14 +20,14 @@ import { SessionFactory } from '../../../services/session';
       <div class="m-social-share-buttons">
         <button class="mdl-button mdl-button--raised mdl-color-text--white m-social-share-fb"
           (click)="openWindow('https://www.facebook.com/sharer/sharer.php?u=' + encodedUrl + '&display=popup&ref=plugin&src=share_button')">
-          <!-- i18n: @@MODALS__INVITE__FACEBOOK -->Facebook<!-- /i18n -->
+          <!-- i18n: @@M__NAMES__FACEBOOK -->Facebook<!-- /i18n -->
         </button>
         <button class="mdl-button mdl-button--raised mdl-color-text--white m-social-share-twitter"
           (click)="openWindow('https://twitter.com/intent/tweet?text=Join%20me%20on%20Minds&tw_p=tweetbutton&url=' + encodedUrl)">
-          <!-- i18n: @@MODALS__INVITE__TWITTER -->Twitter<!-- /i18n -->
+          <!-- i18n: @@M__NAMES__TWITTER -->Twitter<!-- /i18n -->
         </button>
         <button class="mdl-button mdl-button--raised mdl-color-text--white m-social-share-email" (click)="openEmail()">
-          <!-- i18n: @@MODALS__INVITE__EMAIL -->Email<!-- /i18n -->
+          <!-- i18n: @@M__COMMON__EMAIL -->Email<!-- /i18n -->
         </button>
       </div>
 

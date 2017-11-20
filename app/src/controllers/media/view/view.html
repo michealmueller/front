@@ -4,7 +4,7 @@
   <ng-container *ngIf="entity?.flags?.spam" i18n="@@MINDS__MEDIA__ENTITY_FLAGGED_AS_SPAM">This media was flagged as spam.</ng-container>
   <ng-container *ngIf="entity?.flags?.deleted" i18n="@@MINDS__MEDIA__ENTITY_FLAGGED_AS_DELETED">This media was flagged as deleted.</ng-container>
 
-  <ng-container *ngIf="!session.isAdmin()" i18n="@@MINDS__MEDIA__APPEAL_FLAG_NOTICE">
+  <ng-container *ngIf="!session.isAdmin()" i18n="@@M__ACTION__APPEAL_MARK">
     If you wish to appeal, please check your <a routerLink="/settings/reported-content">Reported Content console</a>.
   </ng-container>
 </div>
@@ -17,8 +17,8 @@
   >
     <div class="m-mature-overlay" (click)="entity.mature_visibility = !entity.mature_visibility">
         <span class="m-mature-overlay-note">
-          <i class="material-icons" title="Mature content" i18n-title="@@MINDS__MEDIA__MATURE_CONTENT">explicit</i>
-          <span i18n="@@MINDS__MEDIA__CLICK_TO_CONFIRM_18">Click to confirm your are 18+</span>
+          <i class="material-icons" title="Mature content" i18n-title="@@M__COMMON__MATURE_CONTENT">explicit</i>
+          <span i18n="@@M__COMMON__CONFIRM_18">Click to confirm your are 18+</span>
         </span>
     </div>
   </minds-media-theatre>
@@ -46,8 +46,8 @@
       >
         <div class="m-mature-overlay" (click)="entity.mature_visibility = !entity.mature_visibility">
           <span class="m-mature-overlay-note">
-            <i class="material-icons" title="Mature content" i18n-title="@@MINDS__MEDIA__MATURE_CONTENT">explicit</i>
-            <span i18n="@@MINDS__MEDIA__CLICK_TO_CONFIRM_18">Click to confirm your are 18+</span>
+            <i class="material-icons" title="Mature content" i18n-title="@@M__COMMON__MATURE_CONTENT">explicit</i>
+            <span i18n="@@M__COMMON__CONFIRM_18">Click to confirm your are 18+</span>
           </span>
         </div>
 
@@ -83,24 +83,24 @@
               </div>
   
               <div class="m-media-content--play-count" *ngIf="entity['impressions'] || entity['impressions'] === 0">
-                <span i18n="@@MINDS__MEDIA__VIEWS_COUNTER">{{ entity['impressions'] | number }} views</span>
+                <span i18n="@@M__COMMON__VIEWS_WITH_COUNT">{{ entity['impressions'] | number }} views</span>
               </div>
   
               <div class="m-visibility-info" *ngIf="entity.ownerObj.guid == session.getLoggedInUser().guid || session.isAdmin()">
                 <i class="material-icons">visibility</i>
-                <span [hidden]="entity.access_id != 2" i18n="@@MINDS__MEDIA__PUBLIC_VISIBILITY">Public</span>
-                <span [hidden]="entity.access_id != 0" i18n="@@MINDS__MEDIA__UNLISTER_VISIBILITY">Unlisted</span>
+                <span [hidden]="entity.access_id != 2" i18n="@@M__COMMON__VISIBILITY_PUBLIC">Public</span>
+                <span [hidden]="entity.access_id != 0" i18n="@@M__COMMON__VISIBILITY_UNLISTED">Unlisted</span>
               </div>
   
               <div class="m-mature-info" *ngIf="entity.flags && entity.flags.mature">
                 <i class="material-icons">explicit</i>
-                <span i18n="@@MINDS__MEDIA__MATURE_CONTENT">Mature content</span>
+                <span i18n="@@M__COMMON__MATURE_CONTENT">Mature content</span>
               </div>
   
               <div class="m-license-info">
                 <i class="material-icons">public</i>
                 <span [hidden]="!entity.license">{{entity.license}}</span>
-                <span [hidden]="entity.license" i18n="@@MINDS__MEDIA__ALL_RIGHTS_RESERVED">All Rights Reserved</span>
+                <span [hidden]="entity.license" i18n="@@M__COMMON__LICENSE_ALL_RIGHT_RESERVED">All Rights Reserved</span>
               </div>
   
               <a class="m-media-album--backlink"
@@ -214,7 +214,7 @@
   (closed)="deleteToggle = false"
   (actioned)="delete($event)"
   yesButton="Delete permanently"
-  i18n-yesButton="@@MINDS__MEDIA__DELETE_PERMANENTLY"
+  i18n-yesButton="@@M__COMMON__DELETE_PERMANENTLY"
 >
   <p confirm-message>
       <!-- i18n: @@MINDS__MEDIA__CONFIRM_DELETION -->Are you sure you want to delete this?<br><br>There's no UNDO!<!-- /i18n -->

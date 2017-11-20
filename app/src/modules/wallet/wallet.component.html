@@ -16,25 +16,25 @@
       <li>
         <a class="mdl-color-text--blue-grey-500" [routerLink]="['/wallet/purchase']" routerLinkActive="selected">
           <i class="material-icons">shopping_cart</i>
-          <!-- i18n: @@WALLET__BUY_POINTS_NAV -->Buy Points<!-- /i18n -->
+          <!-- i18n: @@M__ACTION__BUY_POINTS -->Buy Points<!-- /i18n -->
         </a>
       </li>
       <li>
         <a class="mdl-color-text--blue-grey-500" routerLink="/wallet/boost" routerLinkActive="selected">
           <i class="material-icons">trending_up</i>
-          <!-- i18n: @@WALLET__BOOST_NAV -->Boost<!-- /i18n -->
+          <!-- i18n: @@M__FEATURE__BOOST -->Boost<!-- /i18n -->
         </a>
       </li>
       <li>
         <a class="mdl-color-text--blue-grey-500 m-wallet--wire-link" routerLink="/wallet/wire" routerLinkActive="selected">
           <i class="ion-icon ion-flash"></i>
-          <!-- i18n: @@WALLET__WIRE_NAV -->Wire<!-- /i18n -->
+          <!-- i18n: @@M__FEATURE__WIRE -->Wire<!-- /i18n -->
         </a>
       </li>
       <li>
         <a class="mdl-color-text--blue-grey-500" routerLink="/plus" routerLinkActive="selected">
           <i class="material-icons">add_circle_outline</i>
-          <!-- i18n: @@WALLET__MINDS_PLUS_NAV -->Minds Plus<!-- /i18n -->
+          <!-- i18n: @@M__FEATURE__MINDS_PLUS -->Minds Plus<!-- /i18n -->
         </a>
       </li>
       <li *ngIf="!session.getLoggedInUser().merchant">
@@ -60,7 +60,7 @@
           routerLinkActive="selected"
           >
           <i class="material-icons">share</i>
-          <span i18n="@@WALLET__AFFILIATE_PROGRAM_NAV">Affiliate Program</span>
+          <span i18n="@@M__FEATURE__AFFILIATE_PROGRAM">Affiliate Program</span>
         </a>
       </li>
     </ul>

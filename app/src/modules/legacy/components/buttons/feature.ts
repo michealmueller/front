@@ -16,7 +16,7 @@ import { Client } from '../../../../services/api';
           <option *ngFor="let category of categories" [value]="category.id">{{category.label}}</option>
         </select>
 
-        <button class="mdl-button mdl-button--colored" (click)="feature()" i18n="@@MINDS__BUTTONS__FEATURE__ACTION">Feature</button>
+        <button class="mdl-button mdl-button--colored" (click)="feature()" i18n="@@M__ACTION__FEATURE">Feature</button>
       </div>
     </m-modal>
   `

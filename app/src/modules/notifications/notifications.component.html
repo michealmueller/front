@@ -20,14 +20,14 @@
   <a (click)="changeFilter('groups')" class="mdl-tabs__tab"
     [ngClass]="{ 'is-active': _filter == 'groups' }"
   >
-    <m-tooltip icon="group_work" i18n="@@NOTIFICATIONS__NOTIFICATIONS__GROUPS_FILTER">Groups</m-tooltip>
-    <span class="m-full-label" i18n="@@NOTIFICATIONS__NOTIFICATIONS__GROUPS_FILTER">Groups</span>
+    <m-tooltip icon="group_work" i18n="@@M__FEATURE__GROUP__PLURAL">Groups</m-tooltip>
+    <span class="m-full-label" i18n="@@M__FEATURE__GROUP__PLURAL">Groups</span>
   </a>
   <a (click)="changeFilter('subscriptions')" class="mdl-tabs__tab"
     [ngClass]="{ 'is-active': _filter == 'subscriptions' }"
   >
-    <m-tooltip icon="people" i18n="@@NOTIFICATIONS__NOTIFICATIONS__SUBSCRIPTIONS_FILTER">Subscriptions</m-tooltip>
-    <span class="m-full-label" i18n="@@NOTIFICATIONS__NOTIFICATIONS__SUBSCRIPTIONS_FILTER">Subscriptions</span>
+    <m-tooltip icon="people" i18n="@@M__COMMON__SUBSCRIPTIONS">Subscriptions</m-tooltip>
+    <span class="m-full-label" i18n="@@M__COMMON__SUBSCRIPTIONS">Subscriptions</span>
   </a>
   <a (click)="changeFilter('votes')" class="mdl-tabs__tab"
     [ngClass]="{ 'is-active': _filter == 'votes' }"
