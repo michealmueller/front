@@ -58,10 +58,9 @@ function transform(source) {
 // MAIN
 
 export = (gulp, plugins) => cb => {
-  if (!argv.file) {
-    console.log('No file');
-    process.exit(1);
+  if (!argv.locale) {
+    cb('Please specify a locale');
   }
 
-  transform(join(APP_SRC, 'locale', argv.file));
+  transform(join(APP_SRC, 'locale', `Minds.${argv.locale}.xliff`));
 };

@@ -1,6 +1,7 @@
 import {readFileSync} from 'fs';
 import {argv} from 'yargs';
 import {normalize, join, sep} from 'path';
+import { getCommitHash } from './utils/commit_hash';
 
 // --------------
 // Configuration.
@@ -10,14 +11,20 @@ const ENVIRONMENTS = {
   PRODUCTION: 'prod'
 };
 
+let DEFAULT_ENV = ENVIRONMENTS.DEVELOPMENT;
+
+if (argv.aot) {
+  DEFAULT_ENV = ENVIRONMENTS.PRODUCTION;
+}
+
 export const PROJECT_ROOT         = normalize(join(__dirname, '..'));
-export const ENV                  = argv['env']         || ENVIRONMENTS.DEVELOPMENT;
+export const ENV                  = argv['env']         || DEFAULT_ENV;
 export const DEBUG                = argv['debug']       || false;
 export const PORT                 = argv['port']        || 5555;
 export const LIVE_RELOAD_PORT     = argv['reload-port'] || 4002;
 export const DOCS_PORT            = argv['docs-port']   || 4003;
 export const APP_BASE             = argv['base']        || '/';
-export const VERSION              = argv['v']           || (ENV !== 'prod' ? Date.now() : '');
+export const VERSION              = argv['v']           || (ENV !== ENVIRONMENTS.PRODUCTION ? Date.now() : getCommitHash());
 
 export const BOOTSTRAP_MODULE     = 'bootstrap';
 
@@ -43,8 +50,8 @@ export const JS_PROD_APP_BUNDLE   = 'app.js';
 export const VERSION_NPM          = '2.14.7';
 export const VERSION_NODE         = '4.0.0';
 
-export const LOCALE                      = argv['locale']                 || '';
-export const LOCALE_INDEX_FILE_NAME      = argv['locale-index-file-name'] || 'index';
+export const LOCALE                      = argv['locale']                     || '';
+export const LOCALE_AOT_INDEX_FILE_NAME  = argv['locale-aot-index-file-name'] || 'index-aot';
 
 interface InjectableDependency {
   src: string;

@@ -6,7 +6,7 @@
 <% if (ENV === 'prod' && !LOCALE) { %>
 <!-- LOCALE: <?= $language ?> -->
 <?php
-    $index = __DIR__ . DIRECTORY_SEPARATOR . "<%= LOCALE_INDEX_FILE_NAME %>.{$language}.php";
+    $index = __DIR__ . DIRECTORY_SEPARATOR . "<%= LOCALE_AOT_INDEX_FILE_NAME %>.{$language}.php";
 
     if (is_readable($index)) {
         include($index);
