@@ -1,0 +1,35 @@
+<div class="m-faq">
+
+  <div class="m-faq--nav">
+
+    <div class="m-faq--nav--category"  *ngFor="let c of faq$ | async">
+      <b>{{c.id}}</b>
+      <ul>
+        <li class="m-faq--nav--item"
+          *ngFor="let question of c.questions; let i = index;"
+          >
+          <span (click)="goTo(c.id, i)">{{question.question}}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="m-faq--nav--back" *ngIf="category != 'all'">
+      <a routerLink="/faq">View the full FAQ</a>
+    </div>
+  </div>
+
+  <div class="m-faq--body">
+
+    <div class="m-faq--category" *ngFor="let c of faq$ | async">
+      <div class="m-faq--question"
+        *ngFor="let question of c.questions; let i = index"
+        id="faq-{{c.id}}--{{i}}"
+        >
+        <h3>{{question.question}}</h3>
+        <p>{{question.answer}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
