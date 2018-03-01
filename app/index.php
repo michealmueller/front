@@ -25,7 +25,7 @@
     <base href="/" />
 
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="<%= APP_CDN %>/assets/icon.png" />
+    <link rel="icon" type="image/png" href="/assets/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 
     <?php
