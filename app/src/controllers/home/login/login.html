@@ -7,34 +7,23 @@
       <source src="{{minds.cdn_assets_url}}assets/videos/earth-1/earth-1.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="overlay overlay--0.6">
+</section>
+<div class="overlay overlay--0.6">
 
-<<<<<<< HEAD
   <section class="m-homepage-section">    
     <div class="" style="max-width:400px">
       <div class="mdl-color-text--white">
         <h3 style="color:black" i18n="@@MINDS__HOME__LOGIN__LOGIN">Login to Planet Concourse</h3>
-=======
-      <div class="" style="max-width:400px;margin-top:70vh;">
-        <div class="mdl-color-text--white">
-          <h3 i18n="@@MINDS__HOME__LOGIN__LOGIN">Login to Minds</h3>
-        </div>
-        <minds-form-login (done)="loggedin()" (doneRegistered)="registered()"></minds-form-login>
->>>>>>> parent of 3b1e3c3c... Moved reg out of landing page
       </div>
+      <minds-form-login (done)="loggedin()" (doneRegistered)="registered()"></minds-form-login>
+    </div>
 
-      <div class="" style="max-width:400px">
-        <div class="mdl-color-text--white">
-          <h3 i18n="@@M__COMMON__START_A_CHANNEL">Not on Minds? Start a channel</h3>
-        </div>
-        <minds-form-register [referrer]="referrer" (done)="registered()"></minds-form-register>
+    <div class="" style="max-width:400px">
+      <div class="mdl-color-text--white">
+        <h3 style="color:black" i18n="@@M__COMMON__START_A_CHANNEL">Don't have a channel? Start one</h3>
       </div>
-<<<<<<< HEAD
       <minds-form-register [referrer]="referrer" (done)="registered()"></minds-form-register>
     </div>
     </section
-=======
->>>>>>> parent of 3b1e3c3c... Moved reg out of landing page
 
-  </div>
-</section>
+</div>
