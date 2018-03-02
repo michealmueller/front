@@ -7,26 +7,6 @@
       <source src="{{minds.cdn_assets_url}}assets/videos/earth-1/earth-1.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="overlay">
-    <div class="mdl-grid m-homepage-grid">
-      <div class="mdl-cell mdl-cell--12-col m-homepage-titles">
-        <h1 i18n="@@M__SOCIAL_NETWORK_SLOGAN">Your Social Network</h1>
-        <h3 [hidden]="session.isLoggedIn()" i18n="@@MINDS__HOME__HOMEPAGE__LAUNCH_CTA">Launch a channel today</h3>
-        <h3 *ngIf="session.isLoggedIn()" i18n="@@MINDS__HOME__HOMEPAGE__WELCOME_LABEL">Welcome {{session.getLoggedInUser().name}}</h3>
-      </div>
-      <div class="mdl-cell mdl-cell--6-col m-homepage-signup" [hidden]="session.isLoggedIn()">
-        <minds-form-register (done)="registered()" (click)="banner.expand = true"></minds-form-register>
-      </div>
-      <div class="mdl-cell mdl-cell--12-col m-app-links">
-        <a href="https://geo.itunes.apple.com/us/app/minds-com/id961771928?mt=8&amp;uo=6" target="_blank">
-          <img src="{{minds.cdn_assets_url}}assets/ext/appstore.png">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.minds.mobile">
-          <img src="{{minds.cdn_assets_url}}assets/ext/playstore.png">
-        </a>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class="m-homepage-section" style="padding-top:0">
@@ -49,10 +29,10 @@
       <label i18n="@@MINDS__HOME__HOMEPAGE__FREE_SPECH_ITEM">Elegant</label>
     </div>
     <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-    
+
         <i class="material-icons mdl-color-text--blue-grey-800">lightbulb_outline</i>
         <label i18n="@@MINDS__HOME__HOMEPAGE__COMMUNITY_OWNED_ITEM">Intelligent</label>
-    
+
     </div>
     <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
       <a href="#" target="_blank">
@@ -67,6 +47,20 @@
       </a>
     </div>
   </div>
+
+  <div class="overlay">
+    <div class="mdl-grid m-homepage-grid">
+      <div class="mdl-cell mdl-cell--12-col m-homepage-titles">
+        <h3 [hidden]="session.isLoggedIn()" i18n="@@MINDS__HOME__HOMEPAGE__LAUNCH_CTA" style="color:black">Launch a channel today</h3>
+        <h3 *ngIf="session.isLoggedIn()" i18n="@@MINDS__HOME__HOMEPAGE__WELCOME_LABEL">Welcome {{session.getLoggedInUser().name}}</h3>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col m-homepage-signup" [hidden]="session.isLoggedIn()">
+        <minds-form-register (done)="registered()" (click)="banner.expand = true"></minds-form-register>
+      </div>
+
+    </div>
+  </div>
+
 </section>
 
 <section class="m-homepage-features mdl-color--blue-grey-900">
@@ -251,6 +245,14 @@
           <a *ngIf="page.path.indexOf('p/') < 0" [href]="page.path" target="_blank" class="mdl-color-text--blue-grey-100">{{page.title}}</a>
         </li>
       </ul>
+      <div class="mdl-cell mdl-cell--12-col m-app-links">
+        <a href="https://geo.itunes.apple.com/us/app/minds-com/id961771928?mt=8&amp;uo=6" target="_blank">
+          <img src="{{minds.cdn_assets_url}}assets/ext/appstore.png">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.minds.mobile">
+          <img src="{{minds.cdn_assets_url}}assets/ext/playstore.png">
+        </a>
+      </div>
       <span class="copyright mdl-color-text--blue-grey-700" i18n="@@M__COMMON__COPYRIGHT_2017">&#169; Minds 2017</span>
     </section>
 
