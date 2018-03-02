@@ -8,22 +8,18 @@
     </video>
   </div>
   <div class="overlay overlay--0.6">
+    <div class="" style="max-width:400px">
+      <div class="mdl-color-text--white">
+        <h3 i18n="@@MINDS__HOME__LOGIN__LOGIN">Login to Minds</h3>
+      </div>
+      <minds-form-login (done)="loggedin()" (doneRegistered)="registered()"></minds-form-login>
+    </div>
 
+    <div class="" style="max-width:400px">
+      <div class="mdl-color-text--white">
+        <h3 i18n="@@M__COMMON__START_A_CHANNEL">Not on Minds? Start a channel</h3>
+      </div>
+      <minds-form-register [referrer]="referrer" (done)="registered()"></minds-form-register>
+    </div>
   </div>
 </section>
-
-<div class="m-homepage-features">
-  <div class="" style="max-width:400px">
-    <div class="mdl-color-text--white">
-      <h3 i18n="@@MINDS__HOME__LOGIN__LOGIN">Login to Minds</h3>
-    </div>
-    <minds-form-login (done)="loggedin()" (doneRegistered)="registered()"></minds-form-login>
-  </div>
-
-  <div class="" style="max-width:400px">
-    <div class="mdl-color-text--white">
-      <h3 i18n="@@M__COMMON__START_A_CHANNEL">Not on Minds? Start a channel</h3>
-    </div>
-    <minds-form-register [referrer]="referrer" (done)="registered()"></minds-form-register>
-  </div>
-</div>
