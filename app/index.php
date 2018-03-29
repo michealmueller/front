@@ -54,6 +54,7 @@
     <!-- inject:css -->
     <!-- endinject -->
 
+      <link rel="stylesheet" href="/stylesheets/overrides.css" />
     <script>
       var ua = window.navigator.userAgent;
       if(ua.indexOf("MSIE") > -1 ||
