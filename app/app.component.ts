@@ -8,6 +8,8 @@ import { LoginReferrerService } from './src/services/login-referrer.service';
 import { ScrollToTopService } from './src/services/scroll-to-top.service';
 import { ContextService } from './src/services/context.service';
 import { OverlayModalService } from './src/services/ux/overlay-modal';
+import { Upload } from './src/services/api/upload';
+import { RecentService } from './src/services/ux/recent';
 
 @Component({
   moduleId: module.id,
@@ -27,6 +29,8 @@ export class Minds {
     public loginReferrer: LoginReferrerService,
     public context: ContextService,
     public overlaymodalservice: OverlayModalService,
+    public upload: Upload,
+    public recentservice: RecentService
   ) {
     this.name = 'Minds';
   }

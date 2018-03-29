@@ -17,7 +17,7 @@ export class AdminPages {
 
   pages: Array<any> = [];
   page: any = {
-    title: 'New Page',
+    title: 'New Page Title',
     body: '',
     path: '',
     menuContainer: 'footer',
