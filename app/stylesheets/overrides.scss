@@ -90,3 +90,17 @@ img {
 .mdl-color--blue-grey-900{
   background-color: #007790; !important;
 }
+
+/*overrides for homepage video*/
+.m-video-banner .video video{
+  max-height: 100vh;
+  min-width: 100vw;
+  bottom:0;
+}
+
+.minds-homepage-banner{
+  position: relative;
+  min-height: 200px;
+  min-height: 88vh;
+  overflow: hidden;
+}
