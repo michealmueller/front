@@ -420,7 +420,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="M__COMMON__COPYRIGHT_2017" datatype="html">
-        <source>© Minds 2017</source>
+        <source>© Planet Concourse 2018</source>
         <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/src/controllers/home/homepage/homepage.ts</context>
@@ -4317,7 +4317,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="M__FEATURE__MINDS_PLUS" datatype="html">
-        <source>Minds Plus</source>
+        <source>Flutterby Plus</source>
         <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/src/modules/wallet/wallet.component.ts</context>
@@ -4934,7 +4934,7 @@
       </trans-unit>
       <trans-unit id="PLUS__SUBSCRIPTION__CONGRATULATE_PLUS" datatype="html">
         <source>
-    Congratulations, you are now a Minds Plus member!
+    Congratulations, you are now a Flutterby Plus member!
   </source>
         <target/>
         <context-group purpose="location">
@@ -6672,7 +6672,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="MINDS__ONBOARDING__AFFILIATES_SUBTEXT" datatype="html">
-        <source>Earn 25% of the revenue Minds generates from people you refer to the site</source>
+        <source>Earn 25% of the revenue Planet Concourse generates from people you refer to the site</source>
         <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/src/modules/onboarding/feed.component.ts</context>

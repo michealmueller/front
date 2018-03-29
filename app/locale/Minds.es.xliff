@@ -205,7 +205,7 @@
       </trans-unit>
       <trans-unit id="MINDS__NEWSFEED__COPYRIGHT_FOOTER">
         <source>© Planet Concourse 2016</source>
-        <target>© Minds 2017</target>
+        <target>© Planet Concourse 2018</target>
       </trans-unit>
       <trans-unit id="MINDS__NEWSFEED__200_FREE_VIEWS">
         <source>Have 200 free views on us. Hit post to be boosted.</source>
@@ -1458,8 +1458,8 @@
         <target>Cancelar Plus</target>
       </trans-unit>
       <trans-unit id="PLUS__SUBSCRIPTION__CONGRATULATE_PLUS">
-        <source>Congratulations, you are now a Minds Plus member!</source>
-        <target>¡Felicitaciones! Ahora eres un miembro Minds Plus.</target>
+        <source>Congratulations, you are now a Flutterby Plus member!</source>
+        <target>¡Felicitaciones! Ahora eres un miembro Flutterby Plus.</target>
       </trans-unit>
       <trans-unit id="PLUS__VERIFY__LINKS_INPUT_LABEL">
         <source>Please enter two social media links, which link back to your Minds channel page</source>
@@ -2167,8 +2167,8 @@
         <target>Become an affiliate</target>
       </trans-unit>
       <trans-unit id="MINDS__ONBOARDING__AFFILIATES_SUBTEXT">
-        <source>Earn 25% of the revenue Minds generates from people you refer to the site</source>
-        <target>Earn 25% of the revenue Minds generates from people you refer to the site</target>
+        <source>Earn 25% of the revenue Planet Concourse generates from people you refer to the site</source>
+        <target>Earn 25% of the revenue Planet Concourse generates from people you refer to the site</target>
       </trans-unit>
       <trans-unit id="NOTIFICATIONS__NOTIFICATIONS__ALL_FILTER">
         <source>All</source>
@@ -2729,8 +2729,8 @@
         <target>Wire</target>
       </trans-unit>
       <trans-unit id="M__COMMON__COPYRIGHT_2017">
-        <source>© Minds 2017</source>
-        <target>© Minds 2017</target>
+        <source>© Planet Concourse 2018</source>
+        <target>© Planet Concourse 2018</target>
       </trans-unit>
       <trans-unit id="M__COMMON__START_A_CHANNEL">
         <source>Not on Minds? Start a channel</source>
@@ -3059,8 +3059,8 @@
         <note>Completed</note>
       </trans-unit>
       <trans-unit id="M__FEATURE__MINDS_PLUS">
-        <source>Minds Plus</source>
-        <target>Minds Plus</target>
+        <source>Flutterby Plus</source>
+        <target>Flutterby Plus</target>
       </trans-unit>
       <trans-unit id="M__COMMON__POINTS_WITH_VALUE">
         <source><x id="INTERPOLATION" /> points</source>
