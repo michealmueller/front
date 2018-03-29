@@ -31,7 +31,7 @@ export class Minds {
     public overlaymodalservice: OverlayModalService,
     public upload: Upload,
     public client: Client,
-    public recentservice: RecentService
+    //public recentservice: RecentService
   ) {
     this.name = 'Minds';
   }
