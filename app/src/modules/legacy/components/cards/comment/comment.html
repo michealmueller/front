@@ -1,4 +1,4 @@
-<div class="mdl-card planetconcourse.worldment minds-block"
+<div class="mdl-card minds-comt minds-block"
   [class.m-comment--error]="comment?.error"
 >
   <div class="minds-avatar" [hovercard]="comment.ownerObj.guid">
@@ -11,8 +11,8 @@
       <span>{{comment.ownerObj.name}} @{{comment.ownerObj.username}}</span>
       <m-channel--badges class="m-channel--badges-activity" [user]="comment.ownerObj" badges="[ 'verified' ]"></m-channel--badges>
     </a>
-    <span class="mdl-color-text--blue-grey-300 planetconcourse.worldment-span planetconcourse.worldment-bullet">{{comment.time_created * 1000 | date: 'medium'}}</span>
-    <span *ngIf="comment.edited" class="mdl-color-text--blue-grey-300 planetconcourse.worldment-span m-edited-text" i18n="@@M__COMMON__EDITED">edited</span>
+    <span class="mdl-color-text--blue-grey-300 minds-comt-span minds-comt-bullet">{{comment.time_created * 1000 | date: 'medium'}}</span>
+    <span *ngIf="comment.edited" class="mdl-color-text--blue-grey-300 minds-comt-span m-edited-text" i18n="@@M__COMMON__EDITED">edited</span>
 
     <div class="mdl-card__menu mdl-color-text--blue-grey-300" *ngIf="comment?.guid">
 
@@ -51,7 +51,7 @@
       </ul>
       <div class="minds-bg-overlay" (click)="toggle.value = false" [hidden]="!toggle.value"></div>
 
-      <span class="planetconcourse.worldments-voting" [hidden]="editing">
+      <span class="minds-comts-voting" [hidden]="editing">
           <a class="m-clickable mdl-color-text--blue-grey-500"
             (click)="onReply.emit({ comment: comment })"
           >
@@ -172,8 +172,8 @@
         (keyup)="getPostPreview(edit)"
         [disabled]="inProgress"
         ></textarea>
-      <span class="planetconcourse.worldment-span" *ngIf="canPost" i18n="@@MINDS__CARDS__COMMENT__PRESS_ESC_TO_CANCEL">Press ESC to cancel</span>
-      <div class="planetconcourse.worldment-span mdl-color-text--red-500" *ngIf="!canPost && triedToPost">
+      <span class="minds-comt-span" *ngIf="canPost" i18n="@@MINDS__CARDS__COMMENT__PRESS_ESC_TO_CANCEL">Press ESC to cancel</span>
+      <div class="minds-comt-span mdl-color-text--red-500" *ngIf="!canPost && triedToPost">
         <!-- i18n: @@M__COMMON__WAIT_UPLOAD -->Please wait until the upload is complete.<!-- /i18n -->
       </div>
 

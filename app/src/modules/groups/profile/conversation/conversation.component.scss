@@ -23,7 +23,7 @@ minds-groups-profile-conversation {
     box-sizing: border-box;
     height: calc(100vh - 180px);
 
-    .planetconcourse.worldments-container {
+    .minds-comts-container {
       max-height: none;
       flex: 1;
       display: flex;
@@ -41,7 +41,7 @@ minds-groups-profile-conversation {
       }
     }
 
-    .planetconcourse.worldment {
+    .minds-comt {
       .mdl-card__menu {
         display: none;
       }
@@ -58,7 +58,7 @@ minds-groups-profile-conversation {
       }
     }
 
-    .planetconcourse.worldment-post {
+    .minds-comt-post {
       flex-shrink: 0;
     }
 
@@ -74,13 +74,13 @@ minds-groups-profile-conversation {
     }
   }
 
-  .planetconcourse.worldments-container {
+  .minds-comts-container {
     overflow-y: visible;
     height: auto;
     max-height: none;
   }
 
-  .planetconcourse.worldment.planetconcourse.worldment-post {
+  .minds-comt.minds-comt-post {
     //position: fixed;
    // bottom: 0;
     //width: 612px;

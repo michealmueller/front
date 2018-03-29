@@ -119,7 +119,7 @@ minds-media-body{
     }
   }
 
-  .planetconcourse.worldments-container {
+  .minds-comts-container {
     max-height: 600px;
 
     @media screen and (max-width:$max-mobile) {
@@ -486,9 +486,9 @@ minds-media-thumbnail-selector{
   box-sizing: border-box;
   border: 1px solid #EEE;
 
-  planetconcourse.worldments {
+  minds-comts {
     margin-top: 0;
-    .planetconcourse.worldments-container {
+    .minds-comts-container {
       max-height: none;
     }
   }

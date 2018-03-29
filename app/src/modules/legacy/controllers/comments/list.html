@@ -1,4 +1,4 @@
-<div class="planetconcourse.worldments-container"
+<div class="minds-comts-container"
   commentsScroll
   (previous)="autoloadPrevious()"
   [emitter]="commentsScrollEmitter"
@@ -44,7 +44,7 @@
 </div>
 
 
-<div class="mdl-card planetconcourse.worldment planetconcourse.worldment-post minds-block" *ngIf="!readonly">
+<div class="mdl-card minds-comt minds-comt-post minds-block" *ngIf="!readonly">
 
     <div class="minds-avatar">
       <a [routerLink]="['/', session.getLoggedInUser().username]">
@@ -67,7 +67,7 @@
                 ></minds-textarea>
             </form>
 
-            <div class="planetconcourse.worldment-span mdl-color-text--red-500" *ngIf="!canPost && triedToPost">
+            <div class="minds-comt-span mdl-color-text--red-500" *ngIf="!canPost && triedToPost">
               <!-- i18n: @@M__COMMON__WAIT_UPLOAD -->Please wait until the upload is complete.<!-- /i18n -->
             </div>
 
