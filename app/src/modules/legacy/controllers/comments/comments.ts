@@ -11,7 +11,7 @@ import { Textarea } from '../../../../common/components/editors/textarea.compone
 
 @Component({
   moduleId: module.id,
-  selector: 'minds-comments',
+  selector: 'planetconcourse.worldments',
   inputs: ['_object : object', '_reversed : reversed', 'limit', 'focusOnInit'],
   templateUrl: 'list.html',
   providers: [

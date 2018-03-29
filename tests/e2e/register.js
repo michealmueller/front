@@ -27,7 +27,7 @@ describe('testing the login', () => {
   it('should create a new register', function(){
     var username = 'test_' + Date.now();
     usernameTextField.sendKeys(username);
-    emailTextField.sendKeys('test@minds.com');
+    emailTextField.sendKeys('test@planetconcourse.world');
     passwordTextField.sendKeys('password');
     password2TextField.sendKeys('password');
     element(by.css('.m-register-btn')).click();

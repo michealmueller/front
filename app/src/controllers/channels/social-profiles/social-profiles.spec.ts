@@ -101,7 +101,7 @@ describe('ChannelSocialProfiles', () => {
     fixture.detectChanges();
 
     const inputField = fixture.debugElement.query(By.css('.m-channel-social-profile-input input'));
-    inputField.nativeElement.value = 'minds.com/mark';
+    inputField.nativeElement.value = 'planetconcourse.world/mark';
     inputField.nativeElement.dispatchEvent(new Event('input'));
 
     comp.editing = false;

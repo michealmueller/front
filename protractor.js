@@ -5,7 +5,7 @@
  *       export MINDS_E2E_BROWSERS=Chrome (firefox, safari)
  *
  * To run on Sauce Labs
- *    export MINDS_E2E_BASE=https://new.minds.com/
+ *    export MINDS_E2E_BASE=https://new.planetconcourse.world/
  *    export MINDS_E2E_LOCAL=FALSE
  */
 
@@ -27,8 +27,8 @@ var config = {
 
 		browser.ignoreSynchronization = true;
     //browser.driver.get(BASE_URL);
-		if(BASE_URL == 'https://new.minds.com/'){
-    	browser.manage().addCookie('beta', 'angular2', '/', 'new.minds.com');
+		if(BASE_URL == 'https://new.planetconcourse.world/'){
+    	browser.manage().addCookie('beta', 'angular2', '/', 'new.planetconcourse.world');
 		  browser.driver.get(BASE_URL);
     }
 	},

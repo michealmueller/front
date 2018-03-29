@@ -180,8 +180,8 @@
         <target>Esta actividad esta marcada como spam.</target>
       </trans-unit>
       <trans-unit id="MINDS__NEWSFEED__SINGLE__APPEAL_FLAG_NOTE">
-        <source>If you wish to appeal, please contact us at info@minds.com.</source>
-        <target>Si quieres apelar, por favor contactanos a info@minds.com.</target>
+        <source>If you wish to appeal, please contact us at info@planetconcourse.world.</source>
+        <target>Si quieres apelar, por favor contactanos a info@planetconcourse.world.</target>
       </trans-unit>
       <trans-unit id="MINDS__NEWSFEED__1_BY_1_CONVERSION">
         <source>1 point = 1 view</source>
@@ -1943,8 +1943,8 @@
         <target>Please explain why you think this content should not be on Minds.</target>
       </trans-unit>
       <trans-unit id="REPORT__CREATOR__DMCA_NOTICE">
-        <source>Please submit a DMCA notice to copyright@minds.com.</source>
-        <target>Please submit a DMCA notice to copyright@minds.com.</target>
+        <source>Please submit a DMCA notice to copyright@planetconcourse.world.</source>
+        <target>Please submit a DMCA notice to copyright@planetconcourse.world.</target>
       </trans-unit>
       <trans-unit id="REPORT__CREATOR__SUBMIT_ACTION">
         <source>SUBMIT</source>

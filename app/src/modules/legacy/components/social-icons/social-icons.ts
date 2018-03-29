@@ -12,9 +12,9 @@ import { EmbedService } from '../../../../services/embed';
 export class SocialIcons {
 
   url: string = '';
-  title: string = 'Shared via Minds.com';
+  title: string = 'Shared via planetconcourse.world';
   encodedUrl: string = '';
-  encodedTitle: string = 'Shared%20via%20Minds.com';
+  encodedTitle: string = 'Shared%20via%20planetconcourse.world';
 
   embedCode: string = '';
   embedModalOpen: boolean = false;

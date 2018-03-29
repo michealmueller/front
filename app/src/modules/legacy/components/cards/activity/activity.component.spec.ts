@@ -247,7 +247,7 @@ export class ButtonRemindMock {
 }
 
 @Component({
-  selector: 'minds-comments',
+  selector: 'planetconcourse.worldments',
   template: ''
 })
 export class MindsCommentsMock {

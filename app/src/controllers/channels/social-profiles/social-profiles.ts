@@ -68,10 +68,10 @@ export class ChannelSocialProfiles {
     {
       key: 'minds',
       label: 'Minds',
-      link: 'https://www.minds.com/:value',
+      link: 'https://www.planetconcourse.world/:value',
       icon: 'minds',
       customIcon: true,
-      domain: 'minds.com',
+      domain: 'planetconcourse.world',
     },
     {
       key: 'reddit',

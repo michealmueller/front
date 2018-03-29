@@ -88,7 +88,7 @@
 <m-social-icons [url]="minds.site_url + (blog.route ? blog.route : 'blog/view/' + blog.guid)" [title]="blog.title" *ngIf="visible"></m-social-icons>
 
 <div class="mdl-grid blogs-grid" style="max-width:660px" *ngIf="blog.guid">
-  <minds-comments [object]="blog"></minds-comments>
+  <planetconcourse.worldments [object]="blog"></planetconcourse.worldments>
 </div>
 
 <m-modal-confirm *ngIf="deleteToggle"

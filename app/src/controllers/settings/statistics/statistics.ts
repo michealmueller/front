@@ -16,7 +16,7 @@ export class SettingsStatistics {
   settings: string;
   data = {
     fullname: 'minds',
-    email: 'minds@minds.com',
+    email: 'minds@planetconcourse.world',
     memberSince: new Date(),
     lastLogin: new Date(),
     storage: '0 GB\'s',

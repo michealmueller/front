@@ -21,7 +21,7 @@ import { EmbedService } from '../../../services/embed';
           <!-- i18n: @@MODALS__SHARE__ON_FACEBOOK -->Share on Facebook<!-- /i18n -->
         </button>
         <button class="mdl-button mdl-button--raised mdl-color-text--white m-social-share-twitter"
-          (click)="openWindow('https://twitter.com/intent/tweet?text=Shared%20via%20Minds.com&tw_p=tweetbutton&url=' + encodedUrl)">
+          (click)="openWindow('https://twitter.com/intent/tweet?text=Shared%20via%20planetconcourse.world&tw_p=tweetbutton&url=' + encodedUrl)">
           <!-- i18n: @@MODALS__SHARE__ON_TWITTER -->Share on Twitter<!-- /i18n -->
         </button>
       </div>

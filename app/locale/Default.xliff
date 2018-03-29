@@ -718,7 +718,7 @@
       </trans-unit>
       <trans-unit id="MINDS__NEWSFEED__SINGLE__APPEAL_FLAG_NOTE" datatype="html">
         <source>
-        If you wish to appeal, please contact us at info@minds.com.
+        If you wish to appeal, please contact us at info@planetconcourse.world.
       </source>
         <target/>
         <context-group purpose="location">
@@ -6076,7 +6076,7 @@
       </trans-unit>
       <trans-unit id="REPORT__CREATOR__DMCA_NOTICE" datatype="html">
         <source>
-      Please submit a DMCA notice to copyright@minds.com.
+      Please submit a DMCA notice to copyright@planetconcourse.world.
     </source>
         <target/>
         <context-group purpose="location">

@@ -11,10 +11,10 @@ Documentation for Minds can be found at [minds.org/docs](https://www.minds.org/d
 Please see the documentation on Minds.org for instructions on how to [build the Minds Front-end](https://www.minds.org/docs/install/preparation.html#front-end).
 
 ## Contributing
-If you'd like to contribute to the Minds project, check out the [Contribution](https://www.minds.org/docs/contributing.html) section of Minds.org or head right over to the [Minds Open Source Community](https://www.minds.com/groups/profile/365903183068794880).  If you've found or fixed a bug, let us know in the [Minds Help and Support Group](https://www.minds.com/groups/profile/100000000000000681/activity)!
+If you'd like to contribute to the Minds project, check out the [Contribution](https://www.minds.org/docs/contributing.html) section of Minds.org or head right over to the [Minds Open Source Community](https://www.planetconcourse.world/groups/profile/365903183068794880).  If you've found or fixed a bug, let us know in the [Minds Help and Support Group](https://www.planetconcourse.world/groups/profile/100000000000000681/activity)!
 
 ## Security reports
-Please report all security issues to [security@minds.com](mailto:security@minds.com).
+Please report all security issues to [security@planetconcourse.world](mailto:security@planetconcourse.world).
 
 ## License
 [AGPLv3](https://www.minds.org/docs/license.html). Please see the license file of each repository.
