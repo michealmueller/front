@@ -4,7 +4,7 @@ export class MindsTitle {
 
   private counter: number;
   private sep = ' | ';
-  private default_title = 'Home  |Planet Concourse Virtual Worlds | Social Impact Challenge Community | Blended Reality |  Purpose Driven Social Networking Hub | Cash Rewards | Cash-Back Social' +
+  private default_title = 'Planet Concourse Virtual Worlds | Social Impact Challenge Community | Blended Reality |  Purpose Driven Social Networking Hub | Cash Rewards | Cash-Back Social' +
       ' Shopping | Social Experiments | Social Challenges | S.I.M.S - Social Impact Management Systems |  Social Economies In Service To Life |   Events Community | Contests | Cultural Touchstone | Cash for Causes ';
   private text: string = '';
 
