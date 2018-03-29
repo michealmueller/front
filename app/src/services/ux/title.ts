@@ -4,7 +4,8 @@ export class MindsTitle {
 
   private counter: number;
   private sep = ' | ';
-  private default_title = 'Minds';
+  private default_title = 'Planet Concourse Virtual Worlds | Economies In Service To Life | Purpose Driven Social Networking Hub | Social Challenges-Contests- Experiences- Events Community |' +
+      ' lS.I.M.S-Social Impact Management Systems | |Contests | Cultural Touchstone | Social Shopping | Cash for Causes';
   private text: string = '';
 
   static _(title: Title) {

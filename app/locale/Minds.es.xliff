@@ -204,7 +204,7 @@
         <target>Buscar canales</target>
       </trans-unit>
       <trans-unit id="MINDS__NEWSFEED__COPYRIGHT_FOOTER">
-        <source>© Minds 2016</source>
+        <source>© Planet Concourse 2016</source>
         <target>© Minds 2017</target>
       </trans-unit>
       <trans-unit id="MINDS__NEWSFEED__200_FREE_VIEWS">

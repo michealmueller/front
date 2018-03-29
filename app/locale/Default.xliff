@@ -815,7 +815,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="MINDS__NEWSFEED__COPYRIGHT_FOOTER" datatype="html">
-        <source>© Minds 2016</source>
+        <source>© Planet Concourse 2016</source>
         <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/src/controllers/newsfeed/newsfeed.ts</context>
