@@ -37,7 +37,8 @@ export class OverlayModalComponent implements AfterViewInit {
     this.dismiss();
 
     if (!componentClass) {
-      throw new Error('Unknown component class');
+        console.log("dead - no component class")
+        throw new Error('Unknown component class');
     }
 
     const componentFactory = this._componentFactoryResolver.resolveComponentFactory(componentClass),

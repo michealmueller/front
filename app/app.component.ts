@@ -7,6 +7,7 @@ import { Session, SessionFactory } from './src/services/session';
 import { LoginReferrerService } from './src/services/login-referrer.service';
 import { ScrollToTopService } from './src/services/scroll-to-top.service';
 import { ContextService } from './src/services/context.service';
+import { OverlayModalService } from './src/services/ux/overlay-modal';
 
 @Component({
   moduleId: module.id,
@@ -24,7 +25,8 @@ export class Minds {
     public analytics: AnalyticsService,
     public sockets: SocketsService,
     public loginReferrer: LoginReferrerService,
-    public context: ContextService
+    public context: ContextService,
+    public overlaymodalservice: OverlayModalService,
   ) {
     this.name = 'Minds';
   }

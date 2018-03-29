@@ -20,6 +20,7 @@ export class OverlayModalService {
 
   create(component, data?, opts?) {
     if (!this.container) {
+      console.log(this.container);
       throw new Error('Missing overlay container');
     }
 
