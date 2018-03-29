@@ -103,6 +103,7 @@
               </div>
             </div>
           </div>
+            <m-overlay-module></m-overlay-module>
         </minds-app>
     <?php endif; ?>
 
