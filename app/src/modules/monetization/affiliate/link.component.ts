@@ -26,7 +26,7 @@ export class AffiliateLinkComponent {
   }
 
   openEmail() {
-    window.location.href = 'mailto:?subject=Join%20me%20on%20minds&body=Join me on Minds ' + this.encodedLink;
+    window.location.href = 'mailto:?subject=Join%20me%20on%20minds&body=Join me on Planet Concourse ' + this.encodedLink;
   }
 
   detectChanges() {

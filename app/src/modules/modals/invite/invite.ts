@@ -66,7 +66,7 @@ export class InviteModal {
   }
 
   openEmail() {
-    window.location.href = 'mailto:?subject=Join%20me%20on%20minds&body=Join me on Minds ' + this.encodedUrl;
+    window.location.href = 'mailto:?subject=Join%20me%20on%20minds&body=Join me on Planet Concourse ' + this.encodedUrl;
   }
 
 }
