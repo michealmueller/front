@@ -1,14 +1,14 @@
 <m-modal [open]="open" (closed)="onClose($event)" *ngIf="!session.isLoggedIn() || display != 'initial'">
     <div class="mdl-card__title" [hidden]="display == 'onboarding' || display == 'categories'">
         <img src="{{minds.cdn_assets_url}}assets/logos/small.png" (click)="close()"/>
-        <h4 class="mdl-color-text--grey-600" i18n="@@M__SOCIAL_NETWORK_SLOGAN">Your Social Network</h4>
+        <h4 class="mdl-color-text--grey-600" i18n="@@M__SOCIAL_NETWORK_SLOGAN">Social Experiment Impact Community</h4>
     </div>
 
     <!-- Initial Display -->
     <div *ngIf="display == 'initial'">
 
         <div class="m-signup-modal-feature-text mdl-card__supporting-text">
-        <!-- i18n: @@MODALS__SIGNUP__SUBTITLE -->An open-source, community-owned <b>social network</b> providing tools for revenue, reach, privacy and Internet freedom. <!-- /i18n -->
+        <!-- i18n: @@MODALS__SIGNUP__SUBTITLE -->A <b>Social Experiment Impact Community</b>, providing tools for revenue, reach, privacy and Internet freedom. <!-- /i18n -->
         </div>
 
         <!--<div class="mdl-card__supporting-text m-signup-buttons">
@@ -40,7 +40,7 @@
         </div>-->
 
         <div class="mdl-card__supporting-text">
-        <span class="m-modal-signup-skip" (click)="close()" i18n="@@MODALS__SIGNUP__MAYBE_LATER">Continue</span>
+            <a href="https://planetconcourse.world/login"><span class="m-modal-signup-skip" (click)="close()"><b>Take the Challenge</b></span></a>
         </div>
     </div>
     <!-- Login Display -->
